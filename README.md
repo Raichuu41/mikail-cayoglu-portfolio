@@ -1,4 +1,4 @@
-# Professional Portfolio by Mikail Cayoglu
+# Personal Portfolio by Mikail Cayoglu
 
 ## Getting Started
 
