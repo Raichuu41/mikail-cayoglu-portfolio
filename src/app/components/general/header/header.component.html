@@ -1,0 +1,149 @@
+<nav [@animateMenu] [class.nav-shadow]='this.pageYPosition>0' class="navbar main-navbar on-top">
+  <div class="container">
+    <a (click)='scroll("banner")'>
+      <svg viewBox="0 0 90 90" width="25" xmlns="http://www.w3.org/2000/svg">
+        <path d="M 10 90 L 10 20 L 30 20 L 50 50 L 70 20 L 90 20 L 90 90 L 70 90 L 70 40 L 50 70 L 30 40 L 30 90 Z"
+              fill="#64FFDA" stroke="#64FFDA" stroke-dasharray="160, 560" stroke-dashoffset="-280"
+              stroke-linejoin="round"
+              stroke-width="4">
+          <animate attributeName="stroke-dashoffset" dur="2s" from="0" repeatCount="indefinite" to="840"/>
+        </path>
+      </svg>
+    </a>
+
+    <ul #nav="ngbNav" class="menu-ul" ngbNav>
+      <li (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")' ngbNavItem>
+        <a (click)='scroll("about")' ngbNavLink><span class='nav-number'>01. </span> <span
+          class="underline nav-text"> {{"Header.Item1" | translate}}</span></a>
+        <ng-template ngbNavContent>First content</ng-template>
+      </li>
+      <li (click)='analyticsService.sendAnalyticEvent("click_experience", "menu", "click")' ngbNavItem>
+        <a (click)='scroll("jobs")' ngbNavLink><span class='nav-number'>02. </span> <span
+          class="underline nav-text"> {{"Header.Item2" | translate}}</span></a>
+        <ng-template ngbNavContent>Second content</ng-template>
+      </li>
+      <li (click)='analyticsService.sendAnalyticEvent("click_jobs", "menu", "click")' ngbNavItem>
+        <a (click)='scroll("projects")' ngbNavLink><span class='nav-number'>03. </span> <span
+          class="underline nav-text"> {{"Header.Item3" | translate}}</span></a>
+        <ng-template ngbNavContent>Second content</ng-template>
+      </li>
+      <li (click)='analyticsService.sendAnalyticEvent("click_contact", "menu", "click")' ngbNavItem>
+        <a (click)='scroll("contact")' ngbNavLink><span class='nav-number'>04. </span> <span
+          class="underline nav-text"> {{"Header.Item4" | translate}}</span></a>
+        <ng-template ngbNavContent>Second content</ng-template>
+      </li>
+      <li ngbNavItem>
+        <a (click)="downloadCV()" class="main-btn cv-btn" ngbNavLink>
+          {{"Header.cvBtn" | translate}}
+        </a>
+      </li>
+      <li>
+        <div class="d-inline-block" ngbDropdown>
+          <div class="language-container" id="dropdownForm1" ngbDropdownToggle>
+            <img *ngIf='languageFormControl.value == "en-EN"' alt="English"
+                 src="https://www.worldometers.info/img/flags/uk-flag.gif" width="20px">
+            <span *ngIf='languageFormControl.value == "en-EN"' class="flag-text">English</span>
+
+            <img *ngIf='languageFormControl.value == "de-DE"' alt="Deutsch"
+                 src="https://www.worldometers.info/img/flags/gm-flag.gif" width="20px">
+            <span *ngIf='languageFormControl.value == "de-DE"' class="flag-text">Deutsch</span>
+            <svg class='arrow-language' height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
+            </svg>
+          </div>
+          <div aria-labelledby="dropdownForm1" ngbDropdownMenu>
+            <div (click)='changeLanguage("de-DE")'
+                 [class.active]='languageFormControl.value == "de-DE"'
+                 class="language-container language-container-selector active"
+                 style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;'>
+              <img alt="Deutsch" src="https://www.worldometers.info/img/flags/gm-flag.gif" width="20px">
+              <span class="flag-text">Deutsch</span>
+              <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
+                   width="16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+              </svg>
+            </div>
+            <div (click)='changeLanguage("en-EN")'
+                 [class.active]='languageFormControl.value == "en-EN"'
+                 class="language-container language-container-selector"
+                 style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;">
+              <img alt="English" src="https://www.worldometers.info/img/flags/uk-flag.gif" width="20px">
+              <span class="flag-text">English</span>
+              <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
+                   width="16" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="menu-wrapper">
+      <div (click)='responsiveMenuVisible = !responsiveMenuVisible' [class.animate]='responsiveMenuVisible'
+           class="hamburger-menu"></div>
+    </div>
+    <div [ngStyle]="{'pointer-events': !responsiveMenuVisible ? 'none' : '' }" class="menu-responsive">
+      <aside [class.aside-show]='responsiveMenuVisible' [class.nav-shadow]='this.pageYPosition>0' class="on-top">
+        <nav>
+          <ol>
+            <li (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")'>
+              <a (click)='scroll("about")'>
+                <span>01. </span> {{"Header.Item1" | translate}}
+              </a>
+            </li>
+            <li (click)='analyticsService.sendAnalyticEvent("click_experience", "menu", "click")'>
+              <a (click)='scroll("jobs")'>
+                <span>02. </span> {{"Header.Item2" | translate}}
+              </a>
+            </li>
+            <li (click)='analyticsService.sendAnalyticEvent("click_jobs", "menu", "click")'>
+              <a (click)='scroll("projects")'>
+                <span>03. </span> {{"Header.Item3" | translate}}
+              </a>
+            </li>
+            <li (click)='analyticsService.sendAnalyticEvent("click_contact", "menu", "click")'>
+              <a (click)='scroll("projects")'>
+                <span>04. </span> {{"Header.Item4" | translate}}
+              </a>
+            </li>
+            <li>
+              <a (click)="downloadCV()" class="main-btn cv-btn">
+                {{"Header.cvBtn" | translate}}
+              </a>
+            </li>
+            <li>
+              <div class="language-container">
+                <div (click)='changeLanguage("de-DE")'
+                     [class.active]='languageFormControl.value == "de-DE"'
+                     class="language-container language-container-selector active"
+                     style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;'>
+                  <img alt="Deutsch" src="https://www.worldometers.info/img/flags/gm-flag.gif">
+                  <span class="flag-text">Deutsch</span>
+                  <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
+                       width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                  </svg>
+                </div>
+                <div (click)='changeLanguage("en-EN")'
+                     [class.active]='languageFormControl.value == "en-EN"'
+                     class="language-container language-container-selector"
+                     style="margin-top: 1px !important; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
+                  <img alt="English" src="https://www.worldometers.info/img/flags/uk-flag.gif">
+                  <span class="flag-text">English</span>
+                  <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
+                       width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                  </svg>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </nav>
+      </aside>
+    </div>
+  </div>
+</nav>

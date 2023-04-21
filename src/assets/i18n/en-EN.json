@@ -1,0 +1,175 @@
+{
+  "Header.Item1": "About me",
+  "Header.Item2": "Experience",
+  "Header.Item3": "Projects",
+  "Header.Item4": "Contact",
+  "Header.cvBtn": "Resume",
+  "Header.cvName": "CV english - Mikail Deniz Cayoglu.pdf",
+  "Banner.Pretitle": "Hello! My name is",
+  "Banner.Description": "I have <span class='underline'>5 years of experience</span> in developing technological solutions as <span class='underline'>Cloud Engineer</span>, <span class='underline'>Data Engineer</span> and <span class='underline'>Software Developer</span>. I am dedicated to writing and refactoring clean, reusable, and scalable code in <span class='underline'>Angular</span>, <span class='underline'>Node.js</span>, <span class='underline'>Python</span> and sometimes in <span class='underline'>C++</span> while following good practices and development standards.",
+  "Banner.ActionBtn": "Get in touch",
+  "AboutMe.Title": "About me",
+  "AboutMe.Paragraphs": [
+    "As a highly skilled computer scientist with <span class='underline'>5 years of experience</span>, I am dedicated to <span class='underline'>developing technological solutions</span> that improve the digital world. With a passion for writing clean, reusable, and scalable code, I strive to always follow good practices and development standards.",
+    "Additionally, I have experience as a <span class='underline'>cloud engineer</span> and <span class='underline'>data engineer</span>, allowing me to not only create software solutions, but also set up and manage the infrastructure needed to support them.",
+    "Some of the technologies that I have trained and worked on include (but are not limited to):"
+  ],
+  "Experience.Title": "Experience",
+  "Experience.Jobs": [
+    {
+      "Tab": "Chiron Services",
+      "Title": "Data & Cloud Engineer",
+      "Date": "September 2020 - Present",
+      "Description": [
+        "Design System Architecture to connect individual components",
+        "Data scraping from different sources like APIs, databases and websites",
+        "Process data into common structures",
+        "Maintain code quality with code reviews",
+        "Set up and maintain the infrastructure in Oracle Cloud",
+        "Implementation of continuous integration and daily backups."
+      ]
+    },
+    {
+      "Tab": "SAP",
+      "Title": "Treasury and Risk Management",
+      "Date": "February 2022 - Present",
+      "Description": [
+        "Developing of a Code Coverage Report Tool in ABAP",
+        "Test Automation with internal SAP Tools",
+        "Working in the SAP S4Finance department"
+      ]
+    },
+    {
+      "Tab": "Molecular Health",
+      "Title": "Quality Assurance Engineer",
+      "Date": "April 2018 - December 2021",
+      "Description": [
+        "Developing of a Test Automation Framework with Behaviour-Driven-Development",
+        "Frontend/Backend Web Development to integrate the test automation framework with a visual interface and to assist the QA team with easily created automated reports",
+        "Code Reviewing and Mentoring in Python to help colleagues acquire improved Python skills and to ensure code quality"
+      ]
+    },
+    {
+      "Tab": "Fiverr",
+      "Title": "Self-employment",
+      "Date": "August 2019 - October 2020",
+      "Description": [
+        "Data Mining and Data Scraping",
+        "Scrap data from different target sources",
+        "Structure data into the desired format",
+        "Analyse data to create new connections"
+      ]
+    }
+  ],
+  "FeatureProjects.Title": "Some Of My Projects",
+  "FeatureProjects.Label": "Featured Project",
+  "FeatureProjects.Projects": [
+    {
+      "Title": "Synk",
+      "Description": "A <span class='underline'>web interface</span> that enables users to manage their projects by providing tools for <span class='underline'>accounting and controlling</span>. It is designed to <span class='underline'>simplify project management</span>, reduce manual data entry and provide accurate financial information for decision-making.",
+      "image": "assets/images/visiexp/layout-explorer-page.png",
+      "Technologies": [
+        "Angular",
+        "Node.js",
+        "API",
+        "RxJS",
+        "SCSS"
+      ]
+    },
+    {
+      "Title": "Visual Similarity Explorer",
+      "Description": "A <span class='underline'>web interface</span> for visually analyzing and grouping <span class='underline'>large sets of images</span> based on user-defined similarity. The system generates a <span class='underline'>2D map</span> of small image previews, allowing the user to <span class='underline'>select and group images</span>. The groups can be further generalized and the <span class='underline'>feature and projection model</span> is retrained, resulting in an updated <span class='underline'>image embedding</span>. The process is iterative, allowing the user to continually refine their groups based on <span class='underline'>subjective similarity</span>.",
+      "image": "assets/images/visiexp/layout-explorer-page.png",
+      "Technologies": [
+        "Vue.js",
+        "Machine Learning",
+        "Python",
+        "API",
+        "Websocket"
+      ],
+      "ghLink": "https://github.com/Raichuu41/visi-client"
+    },
+    {
+      "Title": "2D Adventure",
+      "Description": "A <span class='underline'>2D platform rogue-like game</span> written in Unity where the player has to pass all levels to win. Each level provides <span class='underline'>multiple dangerous challenges</span> which the player has to maneuver through. If the time runs out or the player dies, it counts as <span class='underline'>permanent death</span> and leads to a complete restart.",
+      "image": "assets/images/computer-game.png",
+      "Technologies": [
+        "Unity",
+        "C#",
+        "Adobe Photoshop",
+        "Adobe Illustrator"
+      ]
+    }
+  ],
+  "OtherProjects.Title": "Other Noteworthy Projects",
+  "OtherProjects.Projects": [
+    {
+      "Title": "Discord Bot",
+      "Description": "A Discord Bot using the Discord API to automate the server management. It can send welcome messages to newly joined users and assign roles based on their emoticon selections in server messages.",
+      "Technologies": [
+        "Discord",
+        "Python",
+        "API"
+      ]
+    },
+    {
+      "Title": "Feature Builder and Runner (BDD)",
+      "Description": "User Interface to easily create Feature files for behaviour-driven development with drag and drop mechanics. It helps to create feature files in a standardized format and ensures valid syntax. Linked to a system, it can also trigger execution.",
+      "Technologies": [
+        "Angular",
+        "Node.js",
+        "PostgreSQL",
+        "Python",
+        "BDD"
+      ]
+    },
+    {
+      "Title": "Arowana",
+      "Description": "Python Framework for automated testing with behaviour-driven development which integrates with TargetProcess. It dynamically retrieves Feature files from Test Cases, provides the setup for execution and updates the results back to TargetProcess.",
+      "Technologies": [
+        "TargetProcess",
+        "Python",
+        "API",
+        "BDD"
+      ]
+    },
+    {
+      "Title": "Image Stitching",
+      "Description": "This project combines multiple photographic images with overlapping fields of view to produce a segmented panorama image. It implements the images acquisition, feature detection and description, image matching and lastly blending and composition.",
+      "ghLink": "https://github.com/Raichuu41/3d-cv-image-stitching",
+      "demoLink": "https://github.com/Raichuu41/3d-cv-image-stitching/blob/main/src/demo.ipynb",
+      "Technologies": [
+        "Python",
+        "Computer Vision",
+        "Panorama Image",
+        "cv2"
+      ]
+    },
+    {
+      "Title": "Robotic Games Heist",
+      "Description": "A Robotic Game where a thief robot needs to steal an item and leave the building successfully without getting caught by the guard robot. It is created and simulated in the Robot Operating System (ROS) framework.",
+      "ghLink": "https://github.com/Raichuu41/robotic-games-heist-2021",
+      "Technologies": [
+        "ROS",
+        "C++",
+        "Python",
+        "SLAM"
+      ]
+    },
+    {
+      "Title": "Paradox Interactive Mod Translator",
+      "Description": "An automated Translator using the Google mobile page to translate modded YML files for games from Paradox Interactive, specifically here for Imperator Rome.",
+      "ghLink": "https://github.com/SnowletTV/Invictus",
+      "Technologies": [
+        "Python",
+        "API",
+        "YML",
+        "Modding"
+      ]
+    }
+  ],
+  "Contact.Pretitle": "What's Next",
+  "Contact.Title": "Get in touch!",
+  "Contact.Content": "Feel free to contact me, my inbox is always open. I will answer your email as soon as possible.",
+  "Contact.Btn": "Say Hello"
+}

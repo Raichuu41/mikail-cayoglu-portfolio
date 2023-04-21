@@ -1,0 +1,47 @@
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-box">
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <h3 class="section-title">
+          <span class="n-section-title">03.</span> {{"FeatureProjects.Title" | translate}}
+        </h3>
+      </div>
+      <!-- Start Projects -->
+      <div *ngFor="let project of 'FeatureProjects.Projects' | translate; let i = index"
+           class="d-flex project-container" data-aos="fade-up" data-aos-duration="1000">
+        <!-- Project Image -->
+        <div #imgContainer class="image-container">
+          <img [alt]="project.Title" [src]="project.image" class="rounded project-image">
+        </div>
+        <!-- Project Info -->
+        <div class="project-info-right h-100">
+          <div class="project-box">
+            <!-- Project Label -->
+            <h4 class="feature-project text-right">{{"FeatureProjects.Label" | translate}}</h4>
+            <!-- Project Title -->
+            <h5 class="project-name text-right">{{project.Title}}</h5>
+            <!-- Project Description -->
+            <div class="project-description-box">
+              <p [innerHTML]="project.Description" class="mb-0">
+              </p>
+            </div>
+            <!-- Technology stack -->
+            <ul class="project-skills">
+              <li *ngFor='let technology of project.Technologies' class="ms-3">
+                <span class="underline technology">{{technology}}</span>
+              </li>
+            </ul>
+            <!-- Project Links -->
+            <div class="project-links text-right">
+              <a *ngIf="project['ghLink']" [href]="project['ghLink']" style='color: inherit' target="_blank"><i
+                class="ms-3 fab fa-github"></i></a>
+              <a *ngIf="project['demoLink']" [href]="project['demoLink']" style='color: inherit' target="_blank"><i
+                class="ms-3 fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Projects -->
+    </div>
+  </div>
+</section>

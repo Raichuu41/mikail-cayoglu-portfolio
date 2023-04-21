@@ -1,0 +1,24 @@
+<section class="section banner" id="banner">
+  <div [@bannerTrigger] class="container">
+    <div class="section-box-banner">
+      <div class="content">
+        <div>
+          <h1>{{"Banner.Pretitle" | translate}}</h1>
+        </div>
+        <div class='banner-title'>
+          <h2 class="glow">Mikail Cayoglu.</h2>
+          <h3>Computer Scientist</h3>
+        </div>
+        <div class='banner-description'>
+          <p [innerHTML]='"Banner.Description" | translate' class="mt-4"></p>
+        </div>
+      </div>
+      <div class="div-btn-banner">
+        <a (click)='analyticsService.sendAnalyticEvent("click_send_mail", "banner", "email")'
+           class="main-btn" href="mailto:info@mikail-cayoglu.de" target="_black">
+          {{"Banner.ActionBtn" | translate}}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

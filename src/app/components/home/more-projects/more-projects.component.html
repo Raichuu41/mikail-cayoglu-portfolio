@@ -1,0 +1,47 @@
+<section class="section more-projects">
+  <div class="container">
+    <div class="section-box">
+      <div class="">
+        <h3 class="section-title">{{"OtherProjects.Title" | translate}}
+        </h3>
+      </div>
+      <div class="mt-5">
+        <div class="row p-0">
+          <div *ngFor='let project of "OtherProjects.Projects" | translate; let i = index'
+               class="col-12 col-md-6 col-lg-6 col-xl-4 project-col" data-aos="fade-up" data-aos-duration="1000">
+            <div class="more-project-box">
+              <div class="row w-100 text-left m-0 p-0">
+                <div class="col-6 p-0">
+                  <img src='assets/icons/folder.svg' width="40">
+                </div>
+                <div class="col-6 d-flex p-0 justify-content-end">
+                  <a
+                    (click)='analyticsService.sendAnalyticEvent("click_pokemonlist_external_link", "projects", "click")'
+                    *ngIf="project['demoLink']"
+                    [href]="project['demoLink']" style='color: inherit' target="_blank"><i
+                    class="ms-3 fas fa-external-link-alt"
+                    id="demoLink"></i></a>
+                  <a (click)='analyticsService.sendAnalyticEvent("click_pokemonlist_github", "projects", "click")'
+                     *ngIf="project['ghLink']"
+                     [href]="project['ghLink']" style='color: inherit' target="_blank"><i class="ms-3 fab fa-github"
+                                                                                          id="ghLink"></i></a>
+                </div>
+                <h5 class="other-project-title mt-4">{{project.Title}}</h5>
+                <p class="other-project-description">
+                  {{project.Description}}
+                </p>
+              </div>
+              <div>
+                <ul class="more-projects-skills">
+                  <li *ngFor='let technology of project.Technologies'>
+                    <span class="underline">{{technology}}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

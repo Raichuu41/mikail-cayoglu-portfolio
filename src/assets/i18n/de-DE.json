@@ -1,0 +1,175 @@
+{
+  "Header.Item1": "Über mich",
+  "Header.Item2": "Erfahrung",
+  "Header.Item3": "Projekte",
+  "Header.Item4": "Kontakt",
+  "Header.cvBtn": "Lebenslauf",
+  "Header.cvName": "CV deutsch - Mikail Deniz Cayoglu.pdf",
+  "Banner.Pretitle": "Hallo! Mein Name ist",
+  "Banner.Description": "Ich habe <span class='underline'>5 Jahre Erfahrung</span> in der Entwicklung technologischer Lösungen als <span class='underline'>Cloud Engineer</span>, <span class='underline'>Data Engineer</span> und <span class='underline'>Software Developer</span>. Ich widme mich dem Schreiben und Refactoring von sauberem, wiederverwendbarem und skalierbarem Code in <span class='underline'>Angular</span>, <span class='underline'>Node.js</span>, <span class='underline'>Python</span> und manchmal auch in <span class='underline'>C++</span> unter Einhaltung guter Praktiken und Entwicklungsstandards.",
+  "Banner.ActionBtn": "Kontakt aufnehmen",
+  "AboutMe.Title": "Über mich",
+  "AboutMe.Paragraphs": [
+    "Als hochqualifizierter Informatiker mit <span class='underline'>5 Jahren Erfahrung</span> widme ich mich der <span class='underline'>Entwicklung technologischer Lösungen</span>, die die digitale Welt verbessern. Mit Leidenschaft für das Schreiben von sauberem, wiederverwendbarem und skalierbarem Code strebe ich immer nach guten Praktiken und Entwicklungsstandards.",
+    "Darüber hinaus habe ich Erfahrung als <span class='underline'>Cloud Engineer</span> und <span class='underline'>Data Engineer</span>, was es mir ermöglicht, nicht nur Softwarelösungen zu erstellen, sondern auch die Infrastruktur zu konfigurieren und zu verwalten, die benötigt wird, um sie zu unterstützen.",
+    "Einige der Technologien, mit denen ich unter anderem vertraut bin, sind:"
+  ],
+  "Experience.Title": "Erfahrung",
+  "Experience.Jobs": [
+    {
+      "Tab": "Chiron Services",
+      "Title": "Data & Cloud Engineer",
+      "Date": "September 2020 - heute",
+      "Description": [
+        "Entwurf der Systemarchitektur zur Verbindung einzelner Komponenten",
+        "Datenscraping aus verschiedenen Quellen wie APIs, Datenbanken und Websites",
+        "Verarbeitung von Daten in gemeinsamen Strukturen",
+        "Wahrung der Codequalität durch Code-Reviews",
+        "Einrichtung und Wartung der Infrastruktur in Oracle Cloud",
+        "Implementierung von Continuous Integration und täglichen Backups."
+      ]
+    },
+    {
+      "Tab": "SAP",
+      "Title": "Treasury and Risk Management",
+      "Date": "Februar 2022 - heute",
+      "Description": [
+        "Entwicklung eines Code-Coverage-Report-Tools in ABAP",
+        "Testautomatisierung mit internen SAP-Tools",
+        "Arbeiten in der SAP S4Finance Abteilung"
+      ]
+    },
+    {
+      "Tab": "Molecular Health",
+      "Title": "Quality Assurance Engineer",
+      "Date": "April 2018 - Dezember 2021",
+      "Description": [
+        "Entwicklung eines Testautomatisierungsframeworks mit Behavior-Driven-Development",
+        "Frontend/Backend Webentwicklung zur Integration des Testautomatisierungsframeworks mit einer visuellen Oberfläche und zur Unterstützung des QA-Teams mit einfach erstellten automatisierten Berichten",
+        "Code-Review und Mentoring in Python, um Kollegen zu helfen, verbesserte Python-Kenntnisse zu erwerben und Codequalität zu gewährleisten."
+      ]
+    },
+    {
+      "Tab": "Fiverr",
+      "Title": "Selbständigkeit",
+      "Date": "August 2019 - Oktober 2020",
+      "Description": [
+        "Data Mining und Datenscraping",
+        "Scrapen von Daten aus verschiedenen Zielquellen",
+        "Strukturierung von Daten in das gewünschte Format",
+        "Analyse von Daten zur Schaffung neuer Verbindungen"
+      ]
+    }
+  ],
+  "FeatureProjects.Title": "Einige meiner Projekte",
+  "FeatureProjects.Label": "Ausgewähltes Projekt",
+  "FeatureProjects.Projects": [
+    {
+      "Title": "Synk",
+      "Description": "Eine <span class='underline'>Web-Oberfläche</span>, die Benutzern ermöglicht, ihre Projekte zu verwalten, indem sie Tools für <span class='underline'>Buchhaltung und Controlling</span> bereitstellt. Sie ist darauf ausgelegt, die Projektverwaltung zu <span class='underline'>vereinfachen</span>, manuelle Dateneingabe zu reduzieren und genaue finanzielle Informationen für Entscheidungsfindungen bereitzustellen.",
+      "image": "assets/images/visiexp/layout-explorer-page.png",
+      "Technologies": [
+        "Angular",
+        "Node.js",
+        "API",
+        "RxJS",
+        "SCSS"
+      ]
+    },
+    {
+      "Title": "Visual Similarity Explorer",
+      "Description": "Eine <span class='underline'>Web-Oberfläche</span> zur visuellen Analyse und Gruppierung <span class='underline'>großer Mengen von Bildern</span> basierend auf benutzerdefinierter Ähnlichkeit. Das System generiert eine <span class='underline'>2D-Karte</span> von kleinen Bildvorschauen, mit der der Benutzer <span class='underline'>Bilder auswählen und gruppieren</span> kann. Die Gruppen können weiter verallgemeinert werden und das <span class='underline'>Feature- und Projektionsmodell</span> wird neu trainiert, was zu einer aktualisierten <span class='underline'>Bild-Einbettung</span> führt. Der Prozess ist iterativ, so dass der Benutzer seine Gruppen kontinuierlich basierend auf <span class='underline'>subjektiver Ähnlichkeit</span> verfeinern kann.",
+      "image": "assets/images/visiexp/layout-explorer-page.png",
+      "Technologies": [
+        "Vue.js",
+        "Machine Learning",
+        "Python",
+        "API",
+        "Websocket"
+      ],
+      "ghLink": "https://github.com/Raichuu41/visi-client"
+    },
+    {
+      "Title": "2D Adventure",
+      "Description": "Ein <span class='underline'>2D-Plattform-Roguelike-Spiel</span>, das in Unity geschrieben wurde, bei dem der Spieler alle Level bestehen muss, um zu gewinnen. Jedes Level bietet <span class='underline'>mehrere gefährliche Herausforderungen</span>, denen der Spieler ausweichen muss. Wenn die Zeit abläuft oder der Spieler stirbt, zählt dies als <span class='underline'>dauerhafter Tod</span> und führt zu einem kompletten Neustart.",
+      "image": "assets/images/computer-game.png",
+      "Technologies": [
+        "Unity",
+        "C#",
+        "Adobe Photoshop",
+        "Adobe Illustrator"
+      ]
+    }
+  ],
+  "OtherProjects.Title": "Weitere erwähnenswerte Projekte",
+  "OtherProjects.Projects": [
+    {
+      "Title": "Discord Bot",
+      "Description": "Ein Discord Bot, der die Discord API verwendet, um das Server-Management zu automatisieren. Er kann Willkommensnachrichten an neu beigetretene Benutzer senden und Rollen auf der Grundlage ihrer Emoticon-Auswahl in Servernachrichten zuweisen.",
+      "Technologies": [
+        "Discord",
+        "Python",
+        "API"
+      ]
+    },
+    {
+      "Title": "Feature Builder und Runner (BDD)",
+      "Description": "Benutzeroberfläche zum einfachen Erstellen von Feature-Dateien für Behaviour Driven Development mit Drag-and-Drop-Mechanik. Es hilft dabei, Feature-Dateien in einem standardisierten Format zu erstellen und stellt eine gültige Syntax sicher. Wenn es mit einem System verknüpft ist, kann es auch die Ausführung auslösen.",
+      "Technologies": [
+        "Angular",
+        "Node.js",
+        "PostgreSQL",
+        "Python",
+        "BDD"
+      ]
+    },
+    {
+      "Title": "Arowana",
+      "Description": "Python Framework für automatisierte Tests mit Behaviour Driven Development, das mit TargetProcess integriert ist. Es ruft Feature-Dateien dynamisch von Testfällen ab, stellt die Einrichtung für die Ausführung bereit und aktualisiert die Ergebnisse zurück zu TargetProcess.",
+      "Technologies": [
+        "TargetProcess",
+        "Python",
+        "API",
+        "BDD"
+      ]
+    },
+    {
+      "Title": "Image Stitching",
+      "Description": "Dieses Projekt kombiniert mehrere fotografische Bilder mit überlappenden Blickfeldern, um ein segmentiertes Panoramabild zu erzeugen. Es implementiert die Bilderfassung, die Merkmalsdetektion und -beschreibung, die Bildanpassung und schließlich das Mischen und Zusammenfügen.",
+      "ghLink": "https://github.com/Raichuu41/3d-cv-image-stitching",
+      "demoLink": "https://github.com/Raichuu41/3d-cv-image-stitching/blob/main/src/demo.ipynb",
+      "Technologies": [
+        "Python",
+        "Computer Vision",
+        "Panorama Image",
+        "cv2"
+      ]
+    },
+    {
+      "Title": "Robotic Games Heist",
+      "Description": "Ein Roboterspiel, bei dem ein Diebroboter ein Objekt stehlen und das Gebäude erfolgreich verlassen muss, ohne vom Wachroboter erwischt zu werden. Es wird im Robot Operating System (ROS) Framework erstellt und simuliert.",
+      "ghLink": "https://github.com/Raichuu41/robotic-games-heist-2021",
+      "Technologies": [
+        "ROS",
+        "C++",
+        "Python",
+        "SLAM"
+      ]
+    },
+    {
+      "Title": "Paradox Interactive Mod-Übersetzer",
+      "Description": "Ein automatischer Übersetzer, der die Google-Mobile-Seite verwendet, um modifizierte YML-Dateien für Spiele von Paradox Interactive zu übersetzen, speziell hier für Imperator Rome.",
+      "ghLink": "https://github.com/SnowletTV/Invictus",
+      "Technologies": [
+        "Python",
+        "API",
+        "YML",
+        "Modding"
+      ]
+    }
+  ],
+  "Contact.Pretitle": "Was kommt als Nächstes",
+  "Contact.Title": "Kontaktiere mich!",
+  "Contact.Content": "Fühlen Sie sich frei, mich zu kontaktieren, mein Posteingang ist immer offen. Ich werde Ihre E-Mail so schnell wie möglich beantworten.",
+  "Contact.Btn": "Hallo sagen"
+}
