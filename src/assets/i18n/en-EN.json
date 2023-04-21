@@ -67,7 +67,7 @@
     {
       "Title": "Synk",
       "Description": "A <span class='underline'>web interface</span> that enables users to manage their projects by providing tools for <span class='underline'>accounting and controlling</span>. It is designed to <span class='underline'>simplify project management</span>, reduce manual data entry and provide accurate financial information for decision-making.",
-      "image": "assets/images/visiexp/layout-explorer-page.png",
+      "image": "assets/images/layout-explorer-page.png",
       "Technologies": [
         "Angular",
         "Node.js",
@@ -79,7 +79,7 @@
     {
       "Title": "Visual Similarity Explorer",
       "Description": "A <span class='underline'>web interface</span> for visually analyzing and grouping <span class='underline'>large sets of images</span> based on user-defined similarity. The system generates a <span class='underline'>2D map</span> of small image previews, allowing the user to <span class='underline'>select and group images</span>. The groups can be further generalized and the <span class='underline'>feature and projection model</span> is retrained, resulting in an updated <span class='underline'>image embedding</span>. The process is iterative, allowing the user to continually refine their groups based on <span class='underline'>subjective similarity</span>.",
-      "image": "assets/images/visiexp/layout-explorer-page.png",
+      "image": "assets/images/layout-explorer-page.png",
       "Technologies": [
         "Vue.js",
         "Machine Learning",

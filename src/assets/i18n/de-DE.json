@@ -67,7 +67,7 @@
     {
       "Title": "Synk",
       "Description": "Eine <span class='underline'>Web-Oberfläche</span>, die Benutzern ermöglicht, ihre Projekte zu verwalten, indem sie Tools für <span class='underline'>Buchhaltung und Controlling</span> bereitstellt. Sie ist darauf ausgelegt, die Projektverwaltung zu <span class='underline'>vereinfachen</span>, manuelle Dateneingabe zu reduzieren und genaue finanzielle Informationen für Entscheidungsfindungen bereitzustellen.",
-      "image": "assets/images/visiexp/layout-explorer-page.png",
+      "image": "assets/images/layout-explorer-page.png",
       "Technologies": [
         "Angular",
         "Node.js",
@@ -79,7 +79,7 @@
     {
       "Title": "Visual Similarity Explorer",
       "Description": "Eine <span class='underline'>Web-Oberfläche</span> zur visuellen Analyse und Gruppierung <span class='underline'>großer Mengen von Bildern</span> basierend auf benutzerdefinierter Ähnlichkeit. Das System generiert eine <span class='underline'>2D-Karte</span> von kleinen Bildvorschauen, mit der der Benutzer <span class='underline'>Bilder auswählen und gruppieren</span> kann. Die Gruppen können weiter verallgemeinert werden und das <span class='underline'>Feature- und Projektionsmodell</span> wird neu trainiert, was zu einer aktualisierten <span class='underline'>Bild-Einbettung</span> führt. Der Prozess ist iterativ, so dass der Benutzer seine Gruppen kontinuierlich basierend auf <span class='underline'>subjektiver Ähnlichkeit</span> verfeinern kann.",
-      "image": "assets/images/visiexp/layout-explorer-page.png",
+      "image": "assets/images/layout-explorer-page.png",
       "Technologies": [
         "Vue.js",
         "Machine Learning",
