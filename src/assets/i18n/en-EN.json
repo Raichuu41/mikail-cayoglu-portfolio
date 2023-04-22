@@ -5,7 +5,8 @@
   "Header.Item4": "Contact",
   "Header.cvBtn": "Resume",
   "Header.cvName": "CV english - Mikail Deniz Cayoglu.pdf",
-  "Banner.Pretitle": "Hello! My name is",
+  "Banner.Greeting": "Hello! My name is",
+  "Banner.Job": "Computer Scientist",
   "Banner.Description": "I have <span class='underline'>5 years of experience</span> in developing technological solutions as <span class='underline'>Cloud Engineer</span>, <span class='underline'>Data Engineer</span> and <span class='underline'>Software Developer</span>. I am dedicated to writing and refactoring clean, reusable, and scalable code in <span class='underline'>Angular</span>, <span class='underline'>Node.js</span>, <span class='underline'>Python</span> and sometimes in <span class='underline'>C++</span> while following good practices and development standards.",
   "Banner.ActionBtn": "Get in touch",
   "AboutMe.Title": "About me",
@@ -168,7 +169,7 @@
       ]
     }
   ],
-  "Contact.Pretitle": "What's Next",
+  "Contact.PreTitle": "What's next?",
   "Contact.Title": "Get in touch!",
   "Contact.Content": "Feel free to contact me, my inbox is always open. I will answer your email as soon as possible.",
   "Contact.Btn": "Say Hello"
