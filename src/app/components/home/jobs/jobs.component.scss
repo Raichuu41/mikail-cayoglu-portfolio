@@ -115,14 +115,14 @@
 @media (max-width: 768px) {
   .jobs {
     .job-description {
-      padding: 0px;
+      padding-left: 30px;
     }
   }
   ::ng-deep .jobs-tabs {
     display: block !important;
 
     .tab-content {
-      margin-left: 0px !important;
+      margin-left: 0 !important;
     }
 
     ul {
