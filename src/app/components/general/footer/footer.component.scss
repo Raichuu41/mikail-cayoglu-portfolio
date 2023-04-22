@@ -98,3 +98,19 @@ footer {
     }
   }
 }
+
+.footer-bottom-bar {
+  svg {
+    font-size: 19px;
+    color: $LightSlate;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  svg:hover {
+    color: $Green;
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
