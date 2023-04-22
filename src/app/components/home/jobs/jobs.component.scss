@@ -1,7 +1,7 @@
 @import "./../../../../variables.scss";
 
 
-::ng-deep .jobs .jobs-tabs {
+.jobs .jobs-tabs {
   display: flex;
 
   .tab-content {
@@ -10,7 +10,6 @@
 
   ul {
     display: block;
-    width: 200px;
     border: none;
   }
 
@@ -18,23 +17,20 @@
     background-color: $LightNavy !important;
     color: $Green !important;
     border-color: transparent !important;
-    border-radius: 0px;
+    border-radius: 0;
   }
 
   a:hover {
     background-color: $LightNavy !important;
     color: $Green !important;
     border-color: transparent !important;
-    border-radius: 0px;
+    border-radius: 0;
   }
 
   a {
     display: inline-block;
-    -webkit-text-decoration: none;
     text-decoration: none;
-    -webkit-text-decoration-skip-ink: auto;
     text-decoration-skip-ink: auto;
-    color: inherit;
     position: relative;
     -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -51,8 +47,6 @@
     background-color: transparent;
     height: 42px;
     padding: 0 20px 2px;
-    -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     text-align: left;
     white-space: nowrap;
     font-family: $CodeFont;
@@ -62,8 +56,6 @@
 
   li {
     border-left: 2px solid $LightestNavy;
-    border-left-width: 2px;
-    border-left-style: solid;
     border-left-color: rgb(48, 60, 85);
   }
 }
@@ -88,9 +80,6 @@
     font-family: $CodeFont;
     font-size: 13px;
     font-weight: normal;
-    -webkit-letter-spacing: 0.05em;
-    -moz-letter-spacing: 0.05em;
-    -ms-letter-spacing: 0.05em;
     letter-spacing: 0.05em;
     color: $LightSlate;
     margin-bottom: 30px;
@@ -118,7 +107,7 @@
       padding-left: 30px;
     }
   }
-  ::ng-deep .jobs-tabs {
+  .jobs-tabs {
     display: block !important;
 
     .tab-content {
