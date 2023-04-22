@@ -15,7 +15,7 @@ body {
 }
 
 .section-box {
-  padding: 130px 0;
+  padding: 100px 0;
 }
 
 .section {
@@ -182,7 +182,9 @@ a {
   .banner h2, .banner h3, .big-title {
     font-size: 60px !important;
   }
-
+  .section-box {
+    padding: 60px 0;
+  }
 }
 
 @media (max-width: 480px) {

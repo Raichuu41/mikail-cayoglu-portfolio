@@ -2,7 +2,10 @@
 
 .project-container {
   height: 360px;
-  margin: 100px 0;
+
+  &:not(:last-child) {
+    margin-bottom: 100px;
+  }
   position: relative;
   display: flex;
   justify-content: center;
@@ -16,11 +19,7 @@
       margin-left: -57px;
     }
 
-    .project-info-right {
-      text-align: left;
-    }
-
-    .project-info-left {
+    .project-info {
       text-align: left;
     }
 
@@ -37,11 +36,7 @@
       margin-left: 0;
     }
 
-    .project-info-right {
-      text-align: right;
-    }
-
-    .project-info-left {
+    .project-info {
       text-align: right;
     }
 
@@ -63,7 +58,7 @@
     }
   }
 
-  .project-info-right,
+  .project-info,
   .project-info-left {
     width: 50%;
     display: table;
@@ -129,4 +124,62 @@
       font-size: 22px;
     }
   }
+}
+
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+    height: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+
+    &:nth-child(even), &:nth-child(odd) {
+      flex-direction: row;
+      text-align: left;
+
+      .project-info {
+        width: 100%;
+        display: block;
+        margin: 20px 0 0;
+        text-align: center;
+      }
+
+      .project-skills {
+        justify-content: start;
+      }
+
+      .image-container {
+        display: none;
+        margin: 0;
+      }
+    }
+
+    .feature-project {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .project-name {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .project-description-box {
+      font-size: 17px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .project-links {
+      margin-top: 20px;
+    }
+
+    .technology {
+      display: inline-block;
+      font-size: 14px;
+    }
+  }
+
 }

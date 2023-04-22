@@ -14,12 +14,12 @@
           <img [alt]="project.Title" [src]="project.image" class="rounded project-image">
         </div>
         <!-- Project Info -->
-        <div class="project-info-right h-100">
+        <div class="project-info">
           <div class="project-box">
             <!-- Project Label -->
-            <h4 class="feature-project text-right">{{"FeatureProjects.Label" | translate}}</h4>
+            <h4 class="feature-project">{{"FeatureProjects.Label" | translate}}</h4>
             <!-- Project Title -->
-            <h5 class="project-name text-right">{{project.Title}}</h5>
+            <h5 class="project-name">{{project.Title}}</h5>
             <!-- Project Description -->
             <div class="project-description-box">
               <p [innerHTML]="project.Description" class="mb-0">
@@ -32,7 +32,7 @@
               </li>
             </ul>
             <!-- Project Links -->
-            <div class="project-links text-right">
+            <div class="project-links">
               <a *ngIf="project['ghLink']" [href]="project['ghLink']" style='color: inherit' target="_blank"><i
                 class="ms-3 fab fa-github"></i></a>
               <a *ngIf="project['demoLink']" [href]="project['demoLink']" style='color: inherit' target="_blank"><i
