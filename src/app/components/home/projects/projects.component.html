@@ -11,7 +11,7 @@
            class="d-flex project-container" data-aos="fade-up" data-aos-duration="1000">
         <!-- Project Image -->
         <div #imgContainer class="image-container">
-          <img [alt]="project.Title" [src]="project.image" class="rounded project-image">
+          <img [alt]="project.Title" [ngSrc]="getImage(project)" sizes="50vw" fill class="rounded project-image" priority>
         </div>
         <!-- Project Info -->
         <div class="project-info">

@@ -34,13 +34,8 @@ export class ProjectsComponent implements OnInit {
 
   }
 
-  debug(): void {
-
-    this.imgContainer.nativeElement.scroll({
-      top: this.imgContainer.nativeElement.scrollHeight,
-      left: 0,
-      behavior: 'smooth',
-    });
+  getImage(project: any): string {
+    return project.image as string;
   }
 
 }
