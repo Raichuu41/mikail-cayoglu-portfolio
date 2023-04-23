@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {HomeComponent} from './home.component';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient} from '@angular/common/http';
@@ -28,18 +28,19 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     MoreProjectsComponent,
     ContactComponent,
   ],
-  imports: [
-    CommonModule,
-    NgbNavModule,
-    CarouselModule,
-    TranslateModule.forChild({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
-  ]
+    imports: [
+        CommonModule,
+        NgbNavModule,
+        CarouselModule,
+        TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        NgOptimizedImage,
+    ]
 })
 export class HomeModule {
 }
