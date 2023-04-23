@@ -68,7 +68,7 @@
     {
       "Title": "Synk",
       "Description": "Eine <span class='underline'>Web-Oberfläche</span>, die Benutzern ermöglicht, ihre Projekte zu verwalten, indem sie Tools für <span class='underline'>Buchhaltung und Controlling</span> bereitstellt. Sie ist darauf ausgelegt, die Projektverwaltung zu <span class='underline'>vereinfachen</span>, manuelle Dateneingabe zu reduzieren und genaue finanzielle Informationen für Entscheidungsfindungen bereitzustellen.",
-      "image": "assets/images/layout-explorer-page.png",
+      "image": "assets/images/layout-explorer-page.webp",
       "Technologies": [
         "Angular",
         "Node.js",
@@ -80,7 +80,7 @@
     {
       "Title": "Visual Similarity Explorer",
       "Description": "Eine <span class='underline'>Web-Oberfläche</span> zur visuellen Analyse und Gruppierung <span class='underline'>großer Mengen von Bildern</span> basierend auf benutzerdefinierter Ähnlichkeit. Das System generiert eine <span class='underline'>2D-Karte</span> von kleinen Bildvorschauen, mit der der Benutzer <span class='underline'>Bilder auswählen und gruppieren</span> kann. Die Gruppen können weiter verallgemeinert werden und das <span class='underline'>Feature- und Projektionsmodell</span> wird neu trainiert, was zu einer aktualisierten <span class='underline'>Bild-Einbettung</span> führt. Der Prozess ist iterativ, so dass der Benutzer seine Gruppen kontinuierlich basierend auf <span class='underline'>subjektiver Ähnlichkeit</span> verfeinern kann.",
-      "image": "assets/images/layout-explorer-page.png",
+      "image": "assets/images/layout-explorer-page.webp",
       "Technologies": [
         "Vue.js",
         "Machine Learning",
@@ -93,7 +93,7 @@
     {
       "Title": "2D Adventure",
       "Description": "Ein <span class='underline'>2D-Plattform-Roguelike-Spiel</span>, das in Unity geschrieben wurde, bei dem der Spieler alle Level bestehen muss, um zu gewinnen. Jedes Level bietet <span class='underline'>mehrere gefährliche Herausforderungen</span>, denen der Spieler ausweichen muss. Wenn die Zeit abläuft oder der Spieler stirbt, zählt dies als <span class='underline'>dauerhafter Tod</span> und führt zu einem kompletten Neustart.",
-      "image": "assets/images/computer-game.png",
+      "image": "assets/images/computer-game.webp",
       "Technologies": [
         "Unity",
         "C#",
