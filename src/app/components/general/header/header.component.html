@@ -10,6 +10,7 @@
         </path>
       </svg>
     </a>
+    <!-- Desktop View Navigation -->
     <ul #nav="ngbNav" class="menu-ul" ngbNav [@animateMenu]="">
       <li (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")' ngbNavItem>
         <a (click)='scroll("about")' ngbNavLink><span class='nav-number'>01. </span> <span
@@ -35,34 +36,24 @@
       <li>
         <div class="d-inline-block" ngbDropdown>
           <div class="language-container" id="dropdownForm1" ngbDropdownToggle>
-            <img *ngIf='languageFormControl.value == "en"' alt="English"
-                 ngSrc="https://www.worldometers.info/img/flags/uk-flag.gif" width="20" height="10">
-            <span *ngIf='languageFormControl.value == "en"' class="flag-text">English</span>
-
-            <img *ngIf='languageFormControl.value == "de"' alt="Deutsch"
-                 ngSrc="https://www.worldometers.info/img/flags/gm-flag.gif" width="20" height="12">
-            <span *ngIf='languageFormControl.value == "de"' class="flag-text">Deutsch</span>
+            <ng-container *ngFor="let language of languageOptions">
+              <img *ngIf='languageFormControl.value == language.languageValue' [alt]="language.text"
+                   [ngSrc]="language.flag"
+                   [width]="language.desktopWidth" [height]="language.desktopHeight">
+              <span *ngIf='languageFormControl.value == language.languageValue'
+                    class="flag-text">{{language.text}}</span>
+            </ng-container>
             <svg class='arrow-language' height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
             </svg>
           </div>
           <div aria-labelledby="dropdownForm1" ngbDropdownMenu>
-            <div (click)='changeLanguage("de")'
-                 [class.active]='languageFormControl.value == "de"'
+            <div *ngFor="let language of languageOptions" (click)="changeLanguage(language.languageValue)"
+                 [class.active]="languageFormControl.value == language.languageValue"
                  class="language-container language-container-selector active">
-              <img alt="Deutsch" ngSrc="https://www.worldometers.info/img/flags/gm-flag.gif" width="20" height="12">
-              <span class="flag-text">Deutsch</span>
-              <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
-                   width="16" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-              </svg>
-            </div>
-            <div (click)='changeLanguage("en")'
-                 [class.active]='languageFormControl.value == "en"'
-                 class="language-container language-container-selector">
-              <img alt="English" ngSrc="https://www.worldometers.info/img/flags/uk-flag.gif" width="20" height="10">
-              <span class="flag-text">English</span>
+              <img [alt]="language.text" [ngSrc]="language.flag" [width]="language.desktopWidth"
+                   [height]="language.desktopHeight">
+              <span class="flag-text">{{language.text}}</span>
               <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                    width="16" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -73,6 +64,7 @@
         </div>
       </li>
     </ul>
+    <!-- Mobile View Toggle -->
     <div class="menu-wrapper">
       <div (click)='responsiveMenuVisible = !responsiveMenuVisible' [class.animate]='responsiveMenuVisible'
            class="hamburger-menu"></div>
@@ -109,24 +101,14 @@
             </li>
             <li>
               <div class="language-container">
-                <div (click)='changeLanguage("de")'
-                     [class.active]='languageFormControl.value == "de"'
+                <div *ngFor="let language of languageOptions"
+                     (click)="changeLanguage(language.languageValue)"
+                     [class.active]="languageFormControl.value == language.languageValue"
                      class="language-container language-container-selector active"
-                     style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;'>
-                  <img alt="Deutsch" ngSrc="https://www.worldometers.info/img/flags/gm-flag.gif" width="35" height="22">
-                  <span class="flag-text">Deutsch</span>
-                  <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
-                       width="16" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-                  </svg>
-                </div>
-                <div (click)='changeLanguage("en")'
-                     [class.active]='languageFormControl.value == "en"'
-                     class="language-container language-container-selector"
-                     style="margin-top: 1px !important; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
-                  <img alt="English" ngSrc="https://www.worldometers.info/img/flags/uk-flag.gif" width="35" height="18">
-                  <span class="flag-text">English</span>
+                     style='border-bottom-left-radius: 0 !important;border-bottom-right-radius: 0 !important;'>
+                  <img [alt]="language.text" [ngSrc]="language.flag" [width]="language.mobileWidth"
+                       [height]="language.mobileHeight">
+                  <span class="flag-text">{{language.text}}</span>
                   <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                        width="16" xmlns="http://www.w3.org/2000/svg">
                     <path

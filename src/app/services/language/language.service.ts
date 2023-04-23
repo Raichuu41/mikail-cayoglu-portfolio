@@ -3,7 +3,7 @@ import {TranslateService} from '@ngx-translate/core';
 import {Location} from '@angular/common';
 
 
-type Language = 'de' | 'en';
+export type Language = 'de' | 'en' | 'tr';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ type Language = 'de' | 'en';
 export class LanguageService {
 
   language: Language = 'en';
-  allowedLanguages: Language[] = ['de', 'en'];
+  allowedLanguages: Language[] = ['de', 'en', 'tr'];
 
 
   constructor(
@@ -24,7 +24,7 @@ export class LanguageService {
     return this.allowedLanguages.includes(language as Language);
   }
   initLanguage(): void {
-    this.translateService.addLangs(['en', 'de']);
+    this.translateService.addLangs(this.allowedLanguages);
     const languages = navigator.languages;
     for (let language of languages) {
       language = language.split('-')[0];
