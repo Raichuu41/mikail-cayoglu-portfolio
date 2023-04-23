@@ -40,11 +40,11 @@
         <div class="d-inline-block" ngbDropdown>
           <div class="language-container" id="dropdownForm1" ngbDropdownToggle>
             <img *ngIf='languageFormControl.value == "en-EN"' alt="English"
-                 src="https://www.worldometers.info/img/flags/uk-flag.gif" width="20px">
+                 ngSrc="https://www.worldometers.info/img/flags/uk-flag.gif" width="20" height="10">
             <span *ngIf='languageFormControl.value == "en-EN"' class="flag-text">English</span>
 
             <img *ngIf='languageFormControl.value == "de-DE"' alt="Deutsch"
-                 src="https://www.worldometers.info/img/flags/gm-flag.gif" width="20px">
+                 ngSrc="https://www.worldometers.info/img/flags/gm-flag.gif" width="20" height="12">
             <span *ngIf='languageFormControl.value == "de-DE"' class="flag-text">Deutsch</span>
             <svg class='arrow-language' height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
@@ -53,9 +53,8 @@
           <div aria-labelledby="dropdownForm1" ngbDropdownMenu>
             <div (click)='changeLanguage("de-DE")'
                  [class.active]='languageFormControl.value == "de-DE"'
-                 class="language-container language-container-selector active"
-                 style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;'>
-              <img alt="Deutsch" src="https://www.worldometers.info/img/flags/gm-flag.gif" width="20px">
+                 class="language-container language-container-selector active">
+              <img alt="Deutsch" ngSrc="https://www.worldometers.info/img/flags/gm-flag.gif" width="20" height="12">
               <span class="flag-text">Deutsch</span>
               <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                    width="16" xmlns="http://www.w3.org/2000/svg">
@@ -65,9 +64,8 @@
             </div>
             <div (click)='changeLanguage("en-EN")'
                  [class.active]='languageFormControl.value == "en-EN"'
-                 class="language-container language-container-selector"
-                 style="margin-top: 1px !important; border-top-left-radius: 0px !important; border-top-right-radius: 0px !important;">
-              <img alt="English" src="https://www.worldometers.info/img/flags/uk-flag.gif" width="20px">
+                 class="language-container language-container-selector">
+              <img alt="English" ngSrc="https://www.worldometers.info/img/flags/uk-flag.gif" width="20" height="10">
               <span class="flag-text">English</span>
               <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                    width="16" xmlns="http://www.w3.org/2000/svg">
@@ -83,6 +81,7 @@
       <div (click)='responsiveMenuVisible = !responsiveMenuVisible' [class.animate]='responsiveMenuVisible'
            class="hamburger-menu"></div>
     </div>
+    <!-- Mobile View Navigation -->
     <div [ngStyle]="{'pointer-events': !responsiveMenuVisible ? 'none' : '' }" class="menu-responsive">
       <aside [class.aside-show]='responsiveMenuVisible' [class.nav-shadow]='this.pageYPosition>0' class="on-top">
         <nav>
@@ -118,7 +117,7 @@
                      [class.active]='languageFormControl.value == "de-DE"'
                      class="language-container language-container-selector active"
                      style='border-bottom-left-radius: 0px !important;border-bottom-right-radius: 0px !important;'>
-                  <img alt="Deutsch" src="https://www.worldometers.info/img/flags/gm-flag.gif">
+                  <img alt="Deutsch" ngSrc="https://www.worldometers.info/img/flags/gm-flag.gif" width="35" height="22">
                   <span class="flag-text">Deutsch</span>
                   <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                        width="16" xmlns="http://www.w3.org/2000/svg">
@@ -130,7 +129,7 @@
                      [class.active]='languageFormControl.value == "en-EN"'
                      class="language-container language-container-selector"
                      style="margin-top: 1px !important; border-top-left-radius: 0 !important; border-top-right-radius: 0 !important;">
-                  <img alt="English" src="https://www.worldometers.info/img/flags/uk-flag.gif">
+                  <img alt="English" ngSrc="https://www.worldometers.info/img/flags/uk-flag.gif" width="35" height="18">
                   <span class="flag-text">English</span>
                   <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                        width="16" xmlns="http://www.w3.org/2000/svg">

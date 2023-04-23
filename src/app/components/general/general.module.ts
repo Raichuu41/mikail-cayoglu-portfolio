@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {FooterComponent} from './footer/footer.component';
 import {HeaderComponent} from './header/header.component';
 import {NgbDropdownModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -18,21 +18,22 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     HeaderComponent,
     FooterComponent,
   ],
-  imports: [
-    CommonModule,
-    NgbModule,
-    RouterModule,
-    NgbDropdownModule,
-    FormsModule,
-    ReactiveFormsModule,
-    TranslateModule.forChild({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
-  ],
+    imports: [
+        CommonModule,
+        NgbModule,
+        RouterModule,
+        NgbDropdownModule,
+        FormsModule,
+        ReactiveFormsModule,
+        TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        NgOptimizedImage,
+    ],
   exports: [HeaderComponent, FooterComponent]
 })
 export class GeneralModule {
