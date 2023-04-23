@@ -1,0 +1,176 @@
+{
+  "Header.Item1": "Hakkımda",
+  "Header.Item2": "Deneyimlerim",
+  "Header.Item3": "Projelerim",
+  "Header.Item4": "İletişim",
+  "Header.cvBtn": "Özgeçmiş",
+  "Header.cvName": "CV english - Mikail Deniz Cayoglu.pdf",
+  "Banner.Greeting": "Merhaba! Benim adım",
+  "Banner.Job": "Bilgisayar Bilimcisi",
+  "Banner.Description": "Ben <span class='underline'>5 yıllık tecrübeye</span> sahip, <span class='underline'>Cloud Engineer</span>, <span class='underline'>Data Engineer</span> ve <span class='underline'>Software Developer</span> olarak teknolojik çözümler geliştirmekteyim. <span class='underline'>Angular</span>, <span class='underline'>Node.js</span>, <span class='underline'>Python</span> ve bazen <span class='underline'>C++</span> ile yazma, yeniden düzenleme ve temiz, yeniden kullanılabilir ve ölçeklenebilir kod yazma konusunda kendimi adadım, iyi uygulamaları ve geliştirme standartlarını takip ediyorum.",
+  "Banner.ActionBtn": "İletişime geçin",
+  "AboutMe.Title": "Hakkımda",
+  "AboutMe.Paragraphs": [
+    "<span class='underline'>5 yıl deneyimli</span> bir bilgisayar bilimcisi olarak, dijital dünyayı geliştiren <span class='underline'>teknolojik çözümler geliştirmeye</span> adanmış biriyim. Temiz, yeniden kullanılabilir ve ölçeklenebilir kod yazma tutkumla, her zaman iyi uygulama ve geliştirme standartlarını takip etmeye çalışıyorum.",
+    "Ek olarak, <span class='underline'>Cloud Engineer</span> ve <span class='underline'>Data Engineer</span> olarak da deneyimim var, bu sayede sadece yazılım çözümleri oluşturmakla kalmayıp, onları desteklemek için gereken altyapıyı kurmak ve yönetmek de mümkün oluyor.",
+    "Eğitim aldığım ve çalıştığım bazı teknolojiler şunları içerir (ancak bunlarla sınırlı değildir):"
+  ],
+  "Experience.Title": "Deneyim",
+  "Experience.Jobs": [
+    {
+      "Tab": "Chiron Services",
+      "Title": "Data & Cloud Engineer",
+      "Date": "Eylül 2020 - Günümüz",
+      "Description": [
+        "Bileşenleri bağlamak için sistem mimarisi tasarlamak",
+        "API'lerden, veritabanlarından ve web sitelerinden farklı kaynaklardan veri kazıma",
+        "Verileri ortak yapılar haline getirme",
+        "Kod kalitesini kod incelemeleriyle koruma",
+        "Oracle Cloud'da altyapıyı kurmak ve yönetmek",
+        "Sürekli entegrasyonun ve günlük yedeklemelerin uygulanması."
+      ]
+    },
+    {
+      "Tab": "SAP",
+      "Title": "Treasury and Risk Management",
+      "Date": "Şubat 2022 - Şu anda",
+      "Description": [
+        "ABAP'ta Kod Kapsama Raporlama Aracı Geliştirme",
+        "Dahili SAP Araçlarıyla Test Otomasyonu",
+        "SAP S4Finance departmanında çalışmak"
+      ]
+    },
+    {
+      "Tab": "Molecular Health",
+      "Title": "Quality Assurance Engineer",
+      "Date": "Nisan 2018 - Aralık 2021",
+      "Description": [
+        "Davranış Odaklı Geliştirme ile Test Otomasyonu Çerçevesi Geliştirme",
+        "Görsel arayüz ile test otomasyon çerçevesini entegre etmek ve QA ekibine kolayca oluşturulan otomatik raporlarla yardımcı olmak için Backend / Frontend Web Geliştirme",
+        "Kod inceleme ve mentörlük yapmak, çalışma arkadaşlarına geliştirilmiş Python becerileri kazandırmak ve kod kalitesini sağlamak"
+      ]
+    },
+    {
+      "Tab": "Fiverr",
+      "Title": "Serbest Çalışan",
+      "Date": "Ağustos 2019 - Ekim 2020",
+      "Description": [
+        "Veri Madenciliği ve Veri Kazıma",
+        "Farklı hedef kaynaklardan veri kazıma",
+        "Veriyi istenen formata yapılandırma",
+        "Yeni bağlantılar oluşturmak için verileri analiz etme"
+      ]
+    }
+  ],
+  "FeatureProjects.Title": "Bazı Projelerim",
+  "FeatureProjects.Label": "Öne Çıkan Proje",
+  "FeatureProjects.Projects": [
+    {
+      "Title": "Synk",
+      "Description": "Kullanıcılara <span class='underline'>muhasebe ve kontrol araçları</span> sunarak projelerini yönetmelerine izin veren bir <span class='underline'>web arayüzü</span>. Proje yönetimini <span class='underline'>kolaylaştırmak</span>, manuel veri girişini azaltmak ve karar verme için doğru finansal bilgi sağlamak amacıyla tasarlanmıştır.",
+      "image": "assets/images/layout-explorer-page.webp",
+      "Technologies": [
+        "Angular",
+        "Node.js",
+        "API",
+        "RxJS",
+        "SCSS"
+      ]
+    },
+    {
+      "Title": "Visual Similarity Explorer",
+      "Description": "Kullanıcının tanımladığı benzerliğe göre <span class='underline'>büyük resim setlerini</span> görsel olarak analiz etmesine ve gruplamasına olanak tanıyan bir <span class='underline'>web arayüzü</span>. Sistem küçük resim önizlemelerinin <span class='underline'>2D haritasını</span> oluşturur ve kullanıcının <span class='underline'>resimleri seçmesine</span> olanak verir. Gruplar daha da genelleştirilebilir ve <span class='underline'>özellik ve projeksiyon modeli</span> yeniden eğitilir, bu da güncellenmiş bir <span class='underline'>resim gömülmesine</span> yol açar. Süreç tekrarlanabilir, böylece kullanıcı <span class='underline'>subjektif benzerlik</span> temelinde gruplarını sürekli olarak iyileştirebilir.",
+      "image": "assets/images/layout-explorer-page.webp",
+      "Technologies": [
+        "Vue.js",
+        "Machine Learning",
+        "Python",
+        "API",
+        "Websocket"
+      ],
+      "ghLink": "https://github.com/Raichuu41/visi-client"
+    },
+    {
+      "Title": "2D Adventure",
+      "Description": "Oyuncunun kazanmak için tüm seviyeleri geçmesi gereken bir Unity'de yazılmış bir <span class='underline'>2D platform rogue-like oyunu</span>. Her seviye, oyuncunun manevra yapması gereken <span class='underline'>çoklu tehlikeli zorluklar</span> sağlar. Süre dolduğunda veya oyuncu öldüğünde, <span class='underline'>kalıcı ölüm</span> olarak sayılır ve tam bir yeniden başlama ile sonuçlanır.",
+      "image": "assets/images/computer-game.webp",
+      "Technologies": [
+        "Unity",
+        "C#",
+        "Adobe Photoshop",
+        "Adobe Illustrator"
+      ]
+    }
+  ],
+  "OtherProjects.Title": "Diğer Önemli Projeler",
+  "OtherProjects.Projects": [
+    {
+      "Title": "Discord Bot",
+      "Description": "Sunucu yönetimini otomatikleştirmek için Discord API kullanarak oluşturulan bir Discord botu. Yeni katılan kullanıcılara hoş geldin mesajları gönderebilir ve sunucu mesajlarındaki emoji seçimlerine dayalı olarak roller atayabilir.",
+      "Technologies": [
+        "Discord",
+        "Python",
+        "API"
+      ]
+    },
+    {
+      "Title": "Özellik Oluşturucu ve Çalıştırıcısı (BDD)",
+      "Description": "Sürükle ve bırak mekaniğiyle davranışa dayalı geliştirme için özellik dosyaları kolayca oluşturmak için kullanıcı arayüzü. Standart bir formatta özellik dosyaları oluşturmaya yardımcı olur ve geçerli sözdizimini sağlar. Bir sisteme bağlandığında, çalıştırmayı tetikleyebilir.",
+      "Technologies": [
+        "Angular",
+        "Node.js",
+        "PostgreSQL",
+        "Python",
+        "BDD"
+      ]
+    },
+    {
+      "Title": "Arowana",
+      "Description": "TargetProcess bütünleşen davranış odaklı otomatik test için Python çerçevesi. Test senaryolarından Özellik dosyalarını dinamik olarak alır, yürütme için kurulum sağlar ve sonuçları geri TargetProcess günceller.",
+      "Technologies": [
+        "TargetProcess",
+        "Python",
+        "API",
+        "BDD"
+      ]
+    },
+    {
+      "Title": "Görüntü Birleştirme",
+      "Description": "Bu proje, örtüşen görüş alanları olan birden fazla fotoğrafik görüntüyü birleştirerek bölümlenmiş bir panorama görüntüsü oluşturur. Görüntü edinimi, özellik tespiti ve açıklama, görüntü eşleştirme ve son olarak karıştırma ve kompozisyon uygulanır.",
+      "ghLink": "https://github.com/Raichuu41/3d-cv-image-stitching",
+      "demoLink": "https://github.com/Raichuu41/3d-cv-image-stitching/blob/main/src/demo.ipynb",
+      "Technologies": [
+        "Python",
+        "Computer Vision",
+        "Panorama Görüntü",
+        "cv2"
+      ]
+    },
+    {
+      "Title": "Robot Oyunu Soygunu",
+      "Description": "Bir hırsız robotun bir öğeyi çalmak ve koruma robotu tarafından yakalanmadan binadan başarılı bir şekilde ayrılmak için gerektiği bir robotik oyundur. Robot Operating System (ROS) çerçevesinde oluşturulur ve simüle edilir.",
+      "ghLink": "https://github.com/Raichuu41/robotic-games-heist-2021",
+      "Technologies": [
+        "ROS",
+        "C++",
+        "Python",
+        "SLAM"
+      ]
+    },
+    {
+      "Title": "Paradox Interactive Mod Translator",
+      "Description": "Paradox Interactive oyunlarından Imperator Rome için modlanmış YML dosyalarını Google mobil sayfasını kullanarak otomatik olarak çeviren bir çevirmen.",
+      "ghLink": "https://github.com/SnowletTV/Invictus",
+      "Technologies": [
+        "Python",
+        "API",
+        "YML",
+        "Modding"
+      ]
+    }
+  ],
+  "Contact.PreTitle": "Ne yapabiliriz?",
+  "Contact.Title": "İletişime geçin!",
+  "Contact.Content": "Benimle iletişime geçmekten çekinmeyin, gelen kutum her zaman açıktır. E-postanıza en kısa sürede cevap vereceğim.",
+  "Contact.Btn": "Merhaba deyin"
+}
