@@ -10,7 +10,6 @@ import {JobsComponent} from './jobs/jobs.component';
 import {MoreProjectsComponent} from './more-projects/more-projects.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
-import {CarouselModule} from 'ngx-owl-carousel-o';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -31,7 +30,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     imports: [
         CommonModule,
         NgbNavModule,
-        CarouselModule,
         TranslateModule.forChild({
             loader: {
                 provide: TranslateLoader,

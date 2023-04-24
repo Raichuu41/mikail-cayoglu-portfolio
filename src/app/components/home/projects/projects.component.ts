@@ -1,5 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {OwlOptions} from 'ngx-owl-carousel-o';
+import {Component, OnInit} from '@angular/core';
 import {AnalyticsService} from 'src/app/services/analytics/analytics.service';
 
 @Component({
@@ -8,30 +7,12 @@ import {AnalyticsService} from 'src/app/services/analytics/analytics.service';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: false,
-    navSpeed: 700,
-    items: 1,
-    autoplay: true,
-    autoplayTimeout: 3000
-  };
-
-  @ViewChild('imgContainer') imgContainer!: ElementRef;
-  slide: any;
-
-
   constructor(
     public analyticsService: AnalyticsService
   ) {
   }
 
   ngOnInit(): void {
-
-
   }
 
   getImage(project: any): string {
