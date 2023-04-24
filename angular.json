@@ -32,25 +32,11 @@
             "scripts": [
               "node_modules/aos/dist/aos.js"
             ],
-            "vendorChunk": false,
-            "extractLicenses": false,
-            "buildOptimizer": true,
-            "sourceMap": true,
-            "namedChunks": false,
-            "optimization": {
-              "scripts": true,
-              "styles": {
-                "minify": true,
-                "inlineCritical": false
-              },
-              "fonts": true
-            },
             "allowedCommonJsDependencies": [
               "aos"
             ],
             "deleteOutputPath": true,
             "aot": true,
-            "outputHashing": "all",
             "budgets": [
               {
                 "type": "initial",
@@ -62,11 +48,26 @@
                 "maximumWarning": "6kb",
                 "maximumError": "10kb"
               }
-            ],
-            "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            ]
           },
           "configurations": {
+            "development": {
+              "vendorChunk": false,
+              "extractLicenses": false,
+              "buildOptimizer": true,
+              "sourceMap": true,
+              "namedChunks": false,
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              },
+              "progress": false,
+              "outputHashing": "none"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -82,9 +83,6 @@
                 },
                 "fonts": true
               },
-              "allowedCommonJsDependencies": [
-                "aos"
-              ],
               "deleteOutputPath": true,
               "aot": true,
               "outputHashing": "all",
@@ -93,18 +91,6 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ],
               "serviceWorker": true,
               "ngswConfigPath": "ngsw-config.json"
             }

@@ -35,4 +35,18 @@ Or alternatively, directly run
 ```
 ng serve
 ```
+
+### Serving the built application locally
+To install serve with NPM globally:
+```
+npm i -g serve
+```
+To build the application (non-production):
+```
+npm run build
+```
+To host it locally (within `/dist/<project-name>/`):
+```
+serve . -l 8080 -s
+```
 Wait for the compilation to complete and go to [http://localhost:4200](http://localhost:4200) by default.

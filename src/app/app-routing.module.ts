@@ -4,7 +4,7 @@ import {HomeComponent} from './components/home/home.component';
 
 const routes: Routes = [
 
-  {path: ':language?', component: HomeComponent},
+  {path: ':lang', component: HomeComponent},
   {path: '**', pathMatch: 'full', redirectTo: '/'},
 
 ];
