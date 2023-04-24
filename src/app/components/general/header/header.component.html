@@ -11,7 +11,7 @@
       </svg>
     </a>
     <!-- Desktop View Navigation -->
-    <ul #nav="ngbNav" class="menu-ul" ngbNav [@animateMenu]="">
+    <ul class="menu-ul" ngbNav [@animateMenu]="">
       <li (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")' ngbNavItem>
         <a (click)='scroll("about")' ngbNavLink><span class='nav-number'>01. </span> <span
           class="underline nav-text"> {{"Header.Item1" | translate}}</span></a>

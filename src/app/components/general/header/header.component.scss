@@ -293,11 +293,11 @@
   fill: #64ffda;
 }
 
-::ng-deep .dropdown-toggle::after {
+.dropdown-toggle::after {
   display: none;
 }
 
-::ng-deep .dropdown-menu.show {
+.dropdown-menu.show {
   padding: 0 !important;
   border-radius: 7px !important;
   background: #ccd6f6 !important;

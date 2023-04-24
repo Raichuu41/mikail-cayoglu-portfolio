@@ -23,13 +23,4 @@ export class MoreProjectsComponent implements OnInit {
       window.scrollTo(0, 0)
     });
   }
-
-  redirect(route: string, event: MouseEvent) {
-    const id = (event.target as Element).id;
-    if (id == 'demoLink' || id == 'ghLink') {
-      return
-    }
-    window.open(route, '_blank');
-  }
-
 }

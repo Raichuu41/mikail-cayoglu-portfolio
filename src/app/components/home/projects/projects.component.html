@@ -10,7 +10,7 @@
       <div *ngFor="let project of 'FeatureProjects.Projects' | translate; let i = index"
            class="d-flex project-container" data-aos="fade-up" data-aos-duration="1000">
         <!-- Project Image -->
-        <div #imgContainer class="image-container">
+        <div class="image-container">
           <img [alt]="project.Title" [ngSrc]="getImage(project)" sizes="50vw" fill class="rounded project-image" priority>
         </div>
         <!-- Project Info -->

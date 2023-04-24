@@ -3,10 +3,8 @@
 .contact {
 
   margin: 0 auto;
-  max-width: 1000px;
   text-align: center;
   max-width: 600px;
-  margin: 0 auto;
   height: 100vh;
   display: table;
 
@@ -39,21 +37,18 @@
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
     -webkit-align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin: 10px 0 40px;
     width: 100%;
     white-space: nowrap;
-    font-size: 32px;
     display: block;
     color: $Green;
     font-size: 16px;
     font-family: $CodeFont;
     font-weight: normal;
-    margin-bottom: 20px;
+    margin: 10px 0 20px;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;

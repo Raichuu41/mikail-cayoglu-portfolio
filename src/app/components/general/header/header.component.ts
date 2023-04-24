@@ -107,7 +107,7 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', ['getScrollPosition($event)'])
   getScrollPosition(event: any) {
-    this.pageYPosition = window.pageYOffset
+    this.pageYPosition = window.scrollY
   }
 
   changeLanguage(language: string) {
