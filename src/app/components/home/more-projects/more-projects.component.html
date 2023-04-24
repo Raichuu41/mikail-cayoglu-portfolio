@@ -18,15 +18,15 @@
                   <a
                     (click)='analyticsService.sendAnalyticEvent("click_pokemonlist_external_link", "projects", "click")'
                     *ngIf="project['demoLink']"
-                    [href]="project['demoLink']" style='color: inherit' target="_blank"><i
+                    [href]="project['demoLink']" style='color: inherit' target="_blank" aria-label="Demo"><i
                     class="ms-3 fas fa-external-link-alt"
                     id="demoLink"></i></a>
                   <a (click)='analyticsService.sendAnalyticEvent("click_pokemonlist_github", "projects", "click")'
                      *ngIf="project['ghLink']"
-                     [href]="project['ghLink']" style='color: inherit' target="_blank"><i class="ms-3 fab fa-github"
+                     [href]="project['ghLink']" style='color: inherit' target="_blank" aria-label="GitHub"><i class="ms-3 fab fa-github"
                                                                                           id="ghLink"></i></a>
                 </div>
-                <h5 class="other-project-title mt-4">{{project.Title}}</h5>
+                <h4 class="other-project-title mt-4">{{project.Title}}</h4>
                 <p class="other-project-description">
                   {{project.Description}}
                 </p>

@@ -20,6 +20,7 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/assets",
+              "src/favicon.ico",
               "src/manifest.webmanifest"
             ],
             "styles": [
@@ -48,14 +49,19 @@
                 "maximumWarning": "6kb",
                 "maximumError": "10kb"
               }
-            ]
+            ],
+            "vendorChunk": true,
+            "buildOptimizer": false,
+            "sourceMap": false,
+            "optimization": false
           },
           "configurations": {
             "development": {
+              "aot": true,
               "vendorChunk": false,
               "extractLicenses": false,
               "buildOptimizer": true,
-              "sourceMap": true,
+              "sourceMap": false,
               "namedChunks": false,
               "optimization": {
                 "scripts": true,
@@ -69,6 +75,7 @@
               "outputHashing": "none"
             },
             "production": {
+              "aot": true,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -83,8 +90,6 @@
                 },
                 "fonts": true
               },
-              "deleteOutputPath": true,
-              "aot": true,
               "outputHashing": "all",
               "sourceMap": true,
               "namedChunks": false,

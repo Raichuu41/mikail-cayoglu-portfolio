@@ -43,10 +43,10 @@ npm i -g serve
 ```
 To build the application (non-production):
 ```
-npm run build
+npm run build-swc
 ```
-To host it locally (within `/dist/<project-name>/`):
+To host it locally:
 ```
-serve . -l 8080 -s
+npm run local-deploy
 ```
 Wait for the compilation to complete and go to [http://localhost:4200](http://localhost:4200) by default.
