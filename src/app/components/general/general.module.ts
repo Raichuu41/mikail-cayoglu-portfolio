@@ -7,33 +7,29 @@ import {RouterModule} from '@angular/router';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClient} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-
-export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
+import {HttpLoaderFactory} from "../../factory/translate-loader.factory";
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
   ],
-    imports: [
-        CommonModule,
-        NgbModule,
-        RouterModule,
-        NgbDropdownModule,
-        FormsModule,
-        ReactiveFormsModule,
-        TranslateModule.forChild({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [HttpClient]
-            }
-        }),
-        NgOptimizedImage,
-    ],
+  imports: [
+    CommonModule,
+    NgbModule,
+    RouterModule,
+    NgbDropdownModule,
+    FormsModule,
+    ReactiveFormsModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    NgOptimizedImage,
+  ],
   exports: [HeaderComponent, FooterComponent]
 })
 export class GeneralModule {

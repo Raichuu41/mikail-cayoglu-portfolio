@@ -56,7 +56,9 @@
                 },
                 "fonts": true
               },
-              "allowedCommonJsDependencies": ["aos"],
+              "allowedCommonJsDependencies": [
+                "aos"
+              ],
               "deleteOutputPath": true,
               "aot": true,
               "outputHashing": "all",

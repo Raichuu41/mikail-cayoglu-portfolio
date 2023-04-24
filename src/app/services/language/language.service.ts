@@ -23,6 +23,7 @@ export class LanguageService {
   isLanguage(language: string): language is Language {
     return this.allowedLanguages.includes(language as Language);
   }
+
   initLanguage(): void {
     this.translateService.addLangs(this.allowedLanguages);
     const languages = navigator.languages;
