@@ -2,16 +2,16 @@
   <div class="container-md">
     <a (click)='scroll("banner")'>
       <svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg">
-        <path class="svg-logo"
-              d="M 10 90 L 10 20 L 30 20 L 50 50 L 70 20 L 90 20 L 90 90 L 70 90 L 70 40 L 50 70 L 30 40 L 30 90 Z" stroke-dasharray="160, 560"
-              stroke-dashoffset="-280"
-              stroke-linejoin="round" stroke-width="2">
+        <path d="M 10 90 L 10 20 L 30 20 L 50 50 L 70 20 L 90 20 L 90 90 L 70 90 L 70 40 L 50 70 L 30 40 L 30 90 Z"
+              stroke-dasharray="160, 560" stroke-dashoffset="-280"
+              stroke-linejoin="round"
+              stroke-width="2" class="svg-logo">
           <animate attributeName="stroke-dashoffset" dur="2s" from="0" repeatCount="indefinite" to="840"/>
         </path>
       </svg>
     </a>
     <!-- Desktop View Navigation -->
-    <ul [@animateMenu]="" class="menu-ul" ngbNav>
+    <ul class="menu-ul" ngbNav [@animateMenu]="">
       <li (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")' ngbNavItem>
         <a (click)='scroll("about")' ngbNavLink><span class='nav-number'>01. </span> <span
           class="underline nav-text"> {{"Header.Item1" | translate}}</span></a>
@@ -38,8 +38,8 @@
           <div class="language-container" id="dropdownForm1" ngbDropdownToggle>
             <ng-container *ngFor="let language of languageOptions">
               <img *ngIf='languageFormControl.value == language.languageValue' [alt]="language.text"
-                   [height]="language.desktopHeight"
-                   [ngSrc]="language.flag" [width]="language.desktopWidth">
+                   [ngSrc]="language.flag"
+                   [width]="language.desktopWidth" [height]="language.desktopHeight">
               <span *ngIf='languageFormControl.value == language.languageValue'
                     class="flag-text">{{language.text}}</span>
             </ng-container>
@@ -48,11 +48,11 @@
             </svg>
           </div>
           <div aria-labelledby="dropdownForm1" ngbDropdownMenu>
-            <div (click)="changeLanguage(language.languageValue)" *ngFor="let language of languageOptions"
+            <div *ngFor="let language of languageOptions" (click)="changeLanguage(language.languageValue)"
                  [class.active]="languageFormControl.value == language.languageValue"
                  class="language-container language-container-selector active">
-              <img [alt]="language.text" [height]="language.desktopHeight" [ngSrc]="language.flag"
-                   [width]="language.desktopWidth">
+              <img [alt]="language.text" [ngSrc]="language.flag" [width]="language.desktopWidth"
+                   [height]="language.desktopHeight">
               <span class="flag-text">{{language.text}}</span>
               <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                    width="16" xmlns="http://www.w3.org/2000/svg">
@@ -101,13 +101,13 @@
             </li>
             <li>
               <div class="language-container">
-                <div (click)="changeLanguage(language.languageValue)"
-                     *ngFor="let language of languageOptions"
+                <div *ngFor="let language of languageOptions"
+                     (click)="changeLanguage(language.languageValue)"
                      [class.active]="languageFormControl.value == language.languageValue"
                      class="language-container language-container-selector active"
                      style='border-bottom-left-radius: 0 !important;border-bottom-right-radius: 0 !important;'>
-                  <img [alt]="language.text" [height]="language.mobileHeight" [ngSrc]="language.flag"
-                       [width]="language.mobileWidth">
+                  <img [alt]="language.text" [ngSrc]="language.flag" [width]="language.mobileWidth"
+                       [height]="language.mobileHeight">
                   <span class="flag-text">{{language.text}}</span>
                   <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                        width="16" xmlns="http://www.w3.org/2000/svg">

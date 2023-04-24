@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-This portfolio is developed for personal use.
+This portfolio is developed for personal use. 
 The design is inspired by Brittany Chiang, her repository can be found [here](https://github.com/bchiang7/v4).
 
 The project is built using Angular 15.
@@ -31,11 +31,8 @@ Just run the start script
 ```
 npm start
 ```
-
 Or alternatively, directly run
-
 ```
 ng serve
 ```
-
 Wait for the compilation to complete and go to [http://localhost:4200](http://localhost:4200) by default.

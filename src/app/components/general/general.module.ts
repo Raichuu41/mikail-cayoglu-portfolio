@@ -14,22 +14,22 @@ import {HttpLoaderFactory} from "../../factory/translate-loader.factory";
     HeaderComponent,
     FooterComponent,
   ],
-  imports: [
-    CommonModule,
-    NgbModule,
-    RouterModule,
-    NgbDropdownModule,
-    FormsModule,
-    ReactiveFormsModule,
-    TranslateModule.forChild({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
-    NgOptimizedImage,
-  ],
+    imports: [
+        CommonModule,
+        NgbModule,
+        RouterModule,
+        NgbDropdownModule,
+        FormsModule,
+        ReactiveFormsModule,
+        TranslateModule.forChild({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        }),
+        NgOptimizedImage,
+    ],
   exports: [HeaderComponent, FooterComponent]
 })
 export class GeneralModule {
