@@ -22,6 +22,9 @@
       margin-right: 0;
     }
 
+    .nav-link:hover {
+      cursor: pointer;
+    }
   }
 
   .menu-responsive {
@@ -322,5 +325,5 @@
 
 .svg-logo {
   stroke: $Green;
-  fill: $Green;
+  fill: $White;
 }

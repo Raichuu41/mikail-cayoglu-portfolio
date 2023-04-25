@@ -52,7 +52,7 @@
             ],
             "vendorChunk": true,
             "buildOptimizer": false,
-            "sourceMap": false,
+            "sourceMap": true,
             "optimization": false
           },
           "configurations": {

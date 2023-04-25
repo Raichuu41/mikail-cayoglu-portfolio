@@ -16,31 +16,43 @@ export class LanguageService {
 
   constructor(
     public translateService: TranslateService,
-    private location: Location,
+    private location: Location
   ) {
   }
 
   isLanguage(language: string): language is Language {
     return this.allowedLanguages.includes(language as Language);
   }
+
   initLanguage(): void {
     this.translateService.addLangs(this.allowedLanguages);
-    const languages = navigator.languages;
-    for (let language of languages) {
-      language = language.split('-')[0];
-      if (this.isLanguage(language)) {
-        this.language = language;
-        break;
+    // Check if language is set in the URL
+    const langSegments = this.location.path().split('/');
+    const langFromUrl = langSegments[1];
+    console.log(this.location.path());
+    if (this.isLanguage(langFromUrl)) {
+      this.language = langFromUrl;
+    } else {
+      const languages = navigator.languages;
+      for (let language of languages) {
+        language = language.split('-')[0];
+        if (this.isLanguage(language)) {
+          this.language = language;
+          break;
+        }
       }
     }
     this.translateService.setDefaultLang(this.language);
-    // Change the URL without navigate:
-    this.location.go(this.language);
   }
 
   changeLanguage(language: Language): void {
-    this.translateService.setDefaultLang(language);
-    this.location.go(language);
-    this.language = language;
+    if (this.isLanguage(language)) {
+      this.language = language;
+      this.translateService.use(language);
+      // replace language code in the URL path
+      const url = this.location.path(true).split('/');
+      url[1] = language;
+      this.location.replaceState(url.join('/'));
+    }
   }
 }

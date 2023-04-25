@@ -1,9 +1,11 @@
 import {Component, HostListener, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, NavigationStart, Router} from '@angular/router';
 import {animate, query, stagger, style, transition, trigger} from '@angular/animations'
 import {AnalyticsService} from 'src/app/services/analytics/analytics.service';
 import {FormControl} from '@angular/forms';
 import {Language, LanguageService} from 'src/app/services/language/language.service';
+import {Location, ViewportScroller} from "@angular/common";
+import {filter, map, take, tap} from "rxjs";
 
 interface LanguageOption {
   text: string,
@@ -14,6 +16,7 @@ interface LanguageOption {
   mobileWidth: number,
   mobileHeight: number
 }
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -70,26 +73,42 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private router: Router,
+    private route: ActivatedRoute,
     public analyticsService: AnalyticsService,
-    public languageService: LanguageService
+    public languageService: LanguageService,
+    private location: Location,
+    private viewportScroller: ViewportScroller
   ) {
   }
 
   ngOnInit(): void {
-
-    this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val))
-
     this.languageFormControl.setValue(this.languageService.language)
-
+    this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val))
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationStart),
+      map((event) => event as NavigationStart),
+      take(1),
+      tap((event: NavigationStart) => {
+        const urlTree = this.router.parseUrl(event.url);
+        if (urlTree.fragment)
+          this.viewportScroller.scrollToAnchor(urlTree.fragment);
+      })
+    )
   }
 
   scroll(el: string) {
     if (document.getElementById(el)) {
       document.getElementById(el)?.scrollIntoView({behavior: 'smooth'});
-    } else {
-      this.router.navigate(['/home']).then(() => document.getElementById(el)?.scrollIntoView({behavior: 'smooth'}));
     }
     this.responsiveMenuVisible = false;
+  }
+
+  addFragment(fragment: string): void {
+    const currentPath = this.location.path(false);
+    const urlWithFragment = currentPath.concat(`#${fragment}`);
+    this.router.navigateByUrl(urlWithFragment).then(() => {
+    });
+    this.scroll(fragment);
   }
 
   downloadCV() {
