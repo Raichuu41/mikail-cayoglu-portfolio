@@ -29,7 +29,6 @@ export class LanguageService {
     // Check if language is set in the URL
     const langSegments = this.location.path().split('/');
     const langFromUrl = langSegments[1];
-    console.log(this.location.path());
     if (this.isLanguage(langFromUrl)) {
       this.language = langFromUrl;
     } else {
