@@ -5,7 +5,7 @@ import {AnalyticsService} from 'src/app/services/analytics/analytics.service';
 import {FormControl} from '@angular/forms';
 import {Language, LanguageService} from 'src/app/services/language/language.service';
 import {Location, ViewportScroller} from "@angular/common";
-import {filter, map, take, tap} from "rxjs";
+import {filter, first, map, take, tap} from "rxjs";
 
 interface LanguageOption {
   text: string,
@@ -42,6 +42,7 @@ export class HeaderComponent implements OnInit {
   pageYPosition!: number;
   languageFormControl: FormControl = new FormControl();
   cvName: string = "";
+  cvLink: string = "";
   languageOptions: LanguageOption[] = [
     {
       text: 'English',
@@ -82,8 +83,11 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.languageFormControl.valueChanges.subscribe(val => {
+      this.languageService.changeLanguage(val);
+      this.updateCVLink();
+    })
     this.languageFormControl.setValue(this.languageService.language)
-    this.languageFormControl.valueChanges.subscribe(val => this.languageService.changeLanguage(val))
     this.router.events.pipe(
       filter(event => event instanceof NavigationStart),
       map((event) => event as NavigationStart),
@@ -103,7 +107,8 @@ export class HeaderComponent implements OnInit {
     this.responsiveMenuVisible = false;
   }
 
-  addFragment(fragment: string): void {
+  addFragment(fragment: string, event: MouseEvent): void {
+    event.preventDefault();
     const currentPath = this.location.path(false);
     const urlWithFragment = currentPath.concat(`#${fragment}`);
     this.router.navigateByUrl(urlWithFragment).then(() => {
@@ -111,16 +116,12 @@ export class HeaderComponent implements OnInit {
     this.scroll(fragment);
   }
 
-  downloadCV() {
-    this.languageService.translateService.get("Header.cvName").subscribe(val => {
-      this.cvName = val
-      // app url
-      let url = window.location.href;
-
-      // Open a new window with the CV
-      window.open(url + "/../assets/cv/" + this.cvName, "_blank");
-    })
-
+  updateCVLink(): void {
+    this.languageService.translateService.get('Header.cvName').pipe(
+      first()).subscribe((value: string) => {
+        this.cvLink = `${location.protocol}//${location.host}/assets/cv/${value}`;
+      }
+    );
   }
 
   @HostListener('window:scroll', ['getScrollPosition($event)'])
