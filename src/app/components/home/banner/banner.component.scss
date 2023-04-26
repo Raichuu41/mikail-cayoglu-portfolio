@@ -58,16 +58,27 @@
 }
 
 .glow {
-  text-shadow: none;
+  position: relative;
+  will-change: opacity;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.glow::before {
+  content: attr(data-text);
+  position: absolute;
+  color: #64FFDA;
+  filter: blur(5px);
+  opacity: 1;
+  z-index: -1;
+  will-change: opacity;
   animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-  from {
-    text-shadow: none;
+  0%, 100% {
+    opacity: 0.3;
   }
-
-  to {
-    text-shadow: 0 0 10px #64FFDA, 0 0 20px #64FFDA;
+  50% {
+    opacity: 1;
   }
 }
