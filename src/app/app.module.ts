@@ -7,7 +7,6 @@ import {GeneralModule} from './components/general/general.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
-import {NgxGoogleAnalyticsModule} from 'ngx-google-analytics';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HttpLoaderFactory} from "./factory/translate-loader.factory";
@@ -26,7 +25,6 @@ import {HttpLoaderFactory} from "./factory/translate-loader.factory";
     AppRoutingModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
-    NgxGoogleAnalyticsModule.forRoot(environment.trackAnalyticID),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

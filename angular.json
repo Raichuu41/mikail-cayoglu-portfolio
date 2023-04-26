@@ -21,7 +21,9 @@
             "assets": [
               "src/assets",
               "src/favicon.ico",
-              "src/manifest.webmanifest"
+              "src/manifest.webmanifest",
+              "src/robots.txt",
+              "src/sitemap.xml"
             ],
             "styles": [
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
