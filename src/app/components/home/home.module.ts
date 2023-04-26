@@ -9,7 +9,6 @@ import {ContactComponent} from './contact/contact.component';
 import {JobsComponent} from './jobs/jobs.component';
 import {MoreProjectsComponent} from './more-projects/more-projects.component';
 import {ProjectsComponent} from './projects/projects.component';
-import {NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
 import {HttpLoaderFactory} from "../../factory/translate-loader.factory";
 
 @NgModule({
@@ -24,7 +23,6 @@ import {HttpLoaderFactory} from "../../factory/translate-loader.factory";
   ],
   imports: [
     CommonModule,
-    NgbNavModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,

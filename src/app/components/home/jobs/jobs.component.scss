@@ -2,73 +2,41 @@
 
 
 .jobs .jobs-tabs {
-  display: flex;
-
   .tab-content {
     margin-left: 38px;
-  }
-
-  ul {
-    display: block;
-    border: none;
   }
 
   a.active {
     background-color: $LightNavy !important;
     color: $Green !important;
-    border-color: transparent !important;
-    border-radius: 0;
   }
 
   a:hover {
-    background-color: $LightNavy !important;
-    color: $Green !important;
-    border-color: transparent !important;
-    border-radius: 0;
+    background-color: $LightNavy;
+    color: $Green;
   }
 
   a {
-    display: inline-block;
-    text-decoration: none;
-    text-decoration-skip-ink: auto;
-    position: relative;
-    -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     cursor: pointer;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    width: 100%;
-    background-color: transparent;
     height: 42px;
     padding: 0 20px 2px;
-    text-align: left;
     white-space: nowrap;
     font-family: $CodeFont;
     font-size: 13px;
     color: $Slate;
   }
 
-  li {
-    border-left: 2px solid $LightestNavy;
-    border-left-color: rgb(48, 60, 85);
+  .companies {
+    border-left: 2px solid $LightNavy;
   }
 }
 
 .jobs {
 
-  max-width: 700px;
-  margin: auto;
-
   .title-tab-content {
     color: $LightestSlate;
     font-size: 22px;
-    font-weight: 500;
     margin-bottom: 5px;
 
     .company-tab-content {
@@ -79,8 +47,6 @@
   .job-time {
     font-family: $CodeFont;
     font-size: 13px;
-    font-weight: normal;
-    letter-spacing: 0.05em;
     color: $LightSlate;
     margin-bottom: 30px;
   }
@@ -100,13 +66,8 @@
   }
 }
 
-
-@media (max-width: 768px) {
-  .jobs {
-    .job-description {
-      padding-left: 30px;
-    }
-  }
+// Laptop size
+@media (max-width: 1023px) {
   .jobs-tabs {
     display: block !important;
 
@@ -114,10 +75,10 @@
       margin-left: 0 !important;
     }
 
-    ul {
+    .nav-pills {
       display: block;
       width: 100% !important;
-      margin-bottom: 50px;
+      margin-bottom: 30px !important;
     }
   }
 }

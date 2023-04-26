@@ -1,28 +1,35 @@
 <section class="section jobs" id='jobs'>
   <div class="container">
     <div class="section-box">
-      <div class="about-title mb-5" data-aos="fade-up" data-aos-duration="1000">
+      <div class="mb-5" data-aos="fade-up" data-aos-duration="1000">
         <h3 class="e-font section-title">
           <span class='code-font n-section-title'>02.</span> {{"Experience.Title" | translate}}
         </h3>
       </div>
-      <div class="jobs-tabs" data-aos="fade-up" data-aos-duration="1000">
-        <ul #nav="ngbNav" [(activeId)]="active" class="nav-tabs jobs-tabs" ngbNav orientation="vertical">
-          <li *ngFor='let job of "Experience.Jobs" | translate; let i = index' [ngbNavItem]="i" [title]="job.Tab">
-            <a ngbNavLink>{{job.Tab}}</a>
-            <ng-template ngbNavContent>
-              <h4 class='title-tab-content'>{{job.Title}} | <span class="company-tab-content">{{job.Tab}}</span></h4>
-              <h5 class="job-time">{{job.Date}}</h5>
-              <!-- {{job.Description | json}} -->
-              <p *ngFor='let jobDescriptionParagraph of job.Description; let i = index'
-                 [innerHTML]="jobDescriptionParagraph | translate"
-                 class="job-description"></p>
-              <span></span>
-            </ng-template>
-          </li>
-        </ul>
-        <div [ngbNavOutlet]="nav" class="mt-2"></div>
+      <div class="jobs-tabs d-flex" data-aos="fade-up" data-aos-duration="1000">
+        <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+          <a *ngFor='let job of "Experience.Jobs" | translate; let i = index'
+             [id]="'job-tab-' + i" class="companies d-flex"
+             [ngClass]="{'active': i === active}" (click)="active = i; $event.preventDefault();"
+             data-toggle="pill" href="#job-content-{{i}}" role="tab"
+             aria-selected="false">{{job.Tab}}
+          </a>
+        </div>
+        <div class="tab-content mt-2">
+          <div *ngFor='let job of "Experience.Jobs" | translate; let i = index'
+               class="tab-pane fade" [ngClass]="{'show active': i === active}"
+               id="job-content-{{i}}" role="tabpanel">
+            <h4 class='title-tab-content'>{{job.Title}} | <span class="company-tab-content">{{job.Tab}}</span></h4>
+            <h5 class="job-time">{{job.Date}}</h5>
+            <!-- {{job.Description | json}} -->
+            <p *ngFor='let jobDescriptionParagraph of job.Description; let i = index'
+               [innerHTML]="jobDescriptionParagraph | translate"
+               class="job-description"></p>
+            <span></span>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
