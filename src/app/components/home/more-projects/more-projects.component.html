@@ -2,13 +2,13 @@
   <div class="container">
     <div class="section-box">
       <div class="">
-        <h3 class="section-title" data-aos="fade-up" data-aos-duration="1000">{{"OtherProjects.Title" | translate}}
+        <h3 class="section-title fade-up" appFadeUp>{{"OtherProjects.Title" | translate}}
         </h3>
       </div>
       <div class="mt-5">
         <div class="row p-0">
           <div *ngFor='let project of "OtherProjects.Projects" | translate; let i = index'
-               class="col-12 col-md-6 col-lg-6 col-xl-4 project-col" data-aos="fade-up" data-aos-duration="1000">
+               class="col-12 col-md-6 col-lg-6 col-xl-4 project-col fade-up" appFadeUp>
             <div class="more-project-box">
               <div class="row w-100 text-left m-0 p-0">
                 <div class="col-6 p-0">

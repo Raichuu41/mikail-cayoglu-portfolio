@@ -13,6 +13,7 @@ import {HttpLoaderFactory} from "../../factory/translate-loader.factory";
 import {FaIconLibrary, FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
+import {SharedModule} from "../../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {faGithub} from "@fortawesome/free-brands-svg-icons";
       }
     }),
     NgOptimizedImage,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule
   ]
 })
 export class HomeModule {

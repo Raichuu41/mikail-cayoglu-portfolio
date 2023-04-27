@@ -27,17 +27,12 @@
             ],
             "styles": [
               "src/custom-bootstrap.scss",
-              "node_modules/aos/dist/aos.css",
               "src/styles.scss",
               "src/fonts.scss"
             ],
             "scripts": [
-              "node_modules/aos/dist/aos.js",
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ],
-            "allowedCommonJsDependencies": [
-              "aos"
             ],
             "deleteOutputPath": true,
             "aot": true,

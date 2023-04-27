@@ -1,18 +1,18 @@
 <section class="section contact" id='contact'>
   <div class="container">
     <div class="section-box">
-      <div class="mb-4" data-aos="fade-up" data-aos-duration="1000">
+      <div class="mb-4 fade-up" appFadeUp>
         <h3 class="contact-pre-title big-subtitle">04. {{"Contact.PreTitle" | translate}}</h3>
         <h4 class="e-font contact-title big-title">
           {{"Contact.Title" | translate}}
         </h4>
       </div>
-      <p data-aos="fade-up" data-aos-duration="1000">
+      <p class="fade-up" appFadeUp>
         {{"Contact.Content" | translate}}
       </p>
-      <div class="mt-5" data-aos="fade-up" data-aos-duration="1000">
+      <div class="mt-5 fade-up" appFadeUp>
         <a (click)='analyticsService.sendAnalyticEvent("click_send_mail", "contact", "email")'
-           class="main-btn" data-aos="fade-up" data-aos-duration="1000" href="mailto:info@mikail-cayoglu.de"
+           class="main-btn fade-up" appFadeUp href="mailto:info@mikail-cayoglu.de"
            target="_blank">
           {{"Contact.Btn" | translate}}
         </a>

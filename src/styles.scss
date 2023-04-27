@@ -126,6 +126,18 @@ a {
   left: 0;
 }
 
+// Fade up Animation
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (min-width: 1100px) and (max-width: 1300px) {
   .container {
     max-width: 950px;

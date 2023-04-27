@@ -1,12 +1,12 @@
 <section class="section jobs" id='jobs'>
   <div class="container">
     <div class="section-box">
-      <div class="mb-5" data-aos="fade-up" data-aos-duration="1000">
+      <div class="mb-5 fade-up" appFadeUp>
         <h3 class="e-font section-title">
           <span class='code-font n-section-title'>02.</span> {{"Experience.Title" | translate}}
         </h3>
       </div>
-      <div class="jobs-tabs d-flex" data-aos="fade-up" data-aos-duration="1000">
+      <div class="jobs-tabs d-flex fade-up" appFadeUp>
         <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
           <a *ngFor='let job of "Experience.Jobs" | translate; let i = index'
              [id]="'job-tab-' + i" class="companies d-flex"

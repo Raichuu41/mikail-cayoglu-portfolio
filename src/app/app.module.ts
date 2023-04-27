@@ -10,6 +10,7 @@ import {environment} from '../environments/environment';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HttpLoaderFactory} from "./factory/translate-loader.factory";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {HttpLoaderFactory} from "./factory/translate-loader.factory";
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    SharedModule
   ],
   providers: [TranslateService],
   exports: [],

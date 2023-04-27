@@ -1,14 +1,14 @@
 <section class="section" id="projects">
   <div class="container">
     <div class="section-box">
-      <div data-aos="fade-up" data-aos-duration="1000">
+      <div class="fade-up" appFadeUp>
         <h3 class="section-title">
           <span class="n-section-title">03.</span> {{"FeatureProjects.Title" | translate}}
         </h3>
       </div>
       <!-- Start Projects -->
       <div *ngFor="let project of 'FeatureProjects.Projects' | translate; let i = index"
-           class="d-flex project-container" data-aos="fade-up" data-aos-duration="1000">
+           class="d-flex project-container fade-up" appFadeUp>
         <!-- Project Image -->
         <div class="image-container">
           <img [alt]="project.Title" [ngSrc]="getImage(project)" sizes="50vw" fill class="rounded project-image"
