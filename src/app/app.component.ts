@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Meta, Title} from '@angular/platform-browser';
+import {Meta} from '@angular/platform-browser';
 import {LanguageService} from 'src/app/services/language/language.service';
 
 @Component({
@@ -11,7 +11,6 @@ export class AppComponent implements OnInit {
   title = 'mikailcayoglu-portfolio';
 
   constructor(
-    private titleService: Title,
     private metaService: Meta,
     private languageService: LanguageService
   ) {
@@ -20,7 +19,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
 
     this.languageService.initLanguage();
-    this.titleService.setTitle('Mikail Cayoglu | Computer Scientist');
     this.metaService.addTags([
       {name: 'keywords', content: 'computer scientist, software, developer'},
       {
