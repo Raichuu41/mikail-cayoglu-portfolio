@@ -41,12 +41,11 @@ export class HeaderComponent implements OnInit {
   responsiveMenuVisible: Boolean = false;
   pageYPosition!: number;
   languageFormControl: FormControl = new FormControl();
-  cvName: string = "";
   cvLink: string = "";
   languageOptions: LanguageOption[] = [
     {
       text: 'English',
-      flag: 'https://www.worldometers.info/img/flags/small/tn_uk-flag.gif',
+      flag: 'assets/flags/uk-flag.gif',
       languageValue: 'en',
       desktopWidth: 20,
       desktopHeight: 10,
@@ -55,7 +54,7 @@ export class HeaderComponent implements OnInit {
     },
     {
       text: 'Deutsch',
-      flag: 'https://www.worldometers.info/img/flags/small/tn_gm-flag.gif',
+      flag: 'assets/flags/de-flag.gif',
       languageValue: 'de',
       desktopWidth: 20,
       desktopHeight: 12,
@@ -64,7 +63,7 @@ export class HeaderComponent implements OnInit {
     },
     {
       text: 'Türkçe',
-      flag: 'https://www.worldometers.info/img/flags/small/tn_tu-flag.gif',
+      flag: 'assets/flags/tr-flag.gif',
       languageValue: 'tr',
       desktopWidth: 20,
       desktopHeight: 13,

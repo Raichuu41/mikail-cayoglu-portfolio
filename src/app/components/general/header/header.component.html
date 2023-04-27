@@ -57,7 +57,7 @@
             <div class="dropdown-item" (click)="changeLanguage(language.languageValue)"
                  [class.active]="languageFormControl.value == language.languageValue">
               <img [alt]="language.text" [ngSrc]="language.flag" [width]="language.desktopWidth"
-                   [height]="language.desktopHeight">
+                   [height]="language.desktopHeight" priority>
               <span class="flag-text">{{language.text}}</span>
               <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                    width="16" xmlns="http://www.w3.org/2000/svg">
