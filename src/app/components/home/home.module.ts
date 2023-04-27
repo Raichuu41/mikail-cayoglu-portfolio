@@ -10,6 +10,9 @@ import {JobsComponent} from './jobs/jobs.component';
 import {MoreProjectsComponent} from './more-projects/more-projects.component';
 import {ProjectsComponent} from './projects/projects.component';
 import {HttpLoaderFactory} from "../../factory/translate-loader.factory";
+import {FaIconLibrary, FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {faExternalLinkAlt} from "@fortawesome/free-solid-svg-icons";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
 
 @NgModule({
   declarations: [
@@ -31,7 +34,11 @@ import {HttpLoaderFactory} from "../../factory/translate-loader.factory";
       }
     }),
     NgOptimizedImage,
+    FontAwesomeModule
   ]
 })
 export class HomeModule {
+  constructor(library: FaIconLibrary) {
+    library.addIcons(faExternalLinkAlt, faGithub);
+  }
 }

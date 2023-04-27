@@ -88,7 +88,7 @@
         "API",
         "Websocket"
       ],
-      "ghLink": "https://github.com/Raichuu41/visi-client"
+      "githubLink": "https://github.com/Raichuu41/visi-client"
     },
     {
       "Title": "2D Adventure",
@@ -137,7 +137,7 @@
     {
       "Title": "Image Stitching",
       "Description": "Dieses Projekt kombiniert mehrere fotografische Bilder mit überlappenden Blickfeldern, um ein segmentiertes Panoramabild zu erzeugen. Es implementiert die Bilderfassung, die Merkmalsdetektion und -beschreibung, die Bildanpassung und schließlich das Mischen und Zusammenfügen.",
-      "ghLink": "https://github.com/Raichuu41/3d-cv-image-stitching",
+      "githubLink": "https://github.com/Raichuu41/3d-cv-image-stitching",
       "demoLink": "https://github.com/Raichuu41/3d-cv-image-stitching/blob/main/src/demo.ipynb",
       "Technologies": [
         "Python",
@@ -149,7 +149,7 @@
     {
       "Title": "Robotic Games Heist",
       "Description": "Ein Roboterspiel, bei dem ein Diebroboter ein Objekt stehlen und das Gebäude erfolgreich verlassen muss, ohne vom Wachroboter erwischt zu werden. Es wird im Robot Operating System (ROS) Framework erstellt und simuliert.",
-      "ghLink": "https://github.com/Raichuu41/robotic-games-heist-2021",
+      "githubLink": "https://github.com/Raichuu41/robotic-games-heist-2021",
       "Technologies": [
         "ROS",
         "C++",
@@ -160,7 +160,7 @@
     {
       "Title": "Paradox Interactive Mod-Übersetzer",
       "Description": "Ein automatischer Übersetzer, der die Google-Mobile-Seite verwendet, um modifizierte YML-Dateien für Spiele von Paradox Interactive zu übersetzen, speziell hier für Imperator Rome.",
-      "ghLink": "https://github.com/SnowletTV/Invictus",
+      "githubLink": "https://github.com/SnowletTV/Invictus",
       "Technologies": [
         "Python",
         "API",

@@ -11,7 +11,8 @@
            class="d-flex project-container" data-aos="fade-up" data-aos-duration="1000">
         <!-- Project Image -->
         <div class="image-container">
-          <img [alt]="project.Title" [ngSrc]="getImage(project)" sizes="50vw" fill class="rounded project-image" priority>
+          <img [alt]="project.Title" [ngSrc]="getImage(project)" sizes="50vw" fill class="rounded project-image"
+               priority>
         </div>
         <!-- Project Info -->
         <div class="project-info">
@@ -33,10 +34,14 @@
             </ul>
             <!-- Project Links -->
             <div class="project-links">
-              <a *ngIf="project['ghLink']" [href]="project['ghLink']" style='color: inherit' target="_blank" aria-label="GitHub"><i
-                class="ms-3 fab fa-github"></i></a>
-              <a *ngIf="project['demoLink']" [href]="project['demoLink']" style='color: inherit' target="_blank" aria-label="Demo"><i
-                class="ms-3 fas fa-external-link-alt"></i></a>
+              <a *ngIf="project['githubLink']" [href]="project['githubLink']" style='color: inherit' target="_blank"
+                 aria-label="GitHub">
+                <fa-icon [icon]="['fab', 'github']" class="ms-3" [id]="'githubLink-' + project.Title"></fa-icon>
+              </a>
+              <a *ngIf="project['demoLink']" [href]="project['demoLink']" style='color: inherit' target="_blank"
+                 aria-label="Demo">
+                <fa-icon [icon]="['fas', 'external-link-alt']" class="ms-3" [id]="'demoLink-' + project.Title"></fa-icon>
+              </a>
             </div>
           </div>
         </div>
