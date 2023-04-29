@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-This portfolio is developed for personal use. 
+This portfolio is developed for personal use.
 The design is inspired by Brittany Chiang, her repository can be found [here](https://github.com/bchiang7/v4).
 
 The project is built using Angular 15.
@@ -31,22 +31,39 @@ Just run the start script
 ```
 npm start
 ```
+
 Or alternatively, directly run
+
 ```
 ng serve
 ```
 
 ### Serving the built application locally
+
 To install serve with NPM globally:
+
 ```
 npm i -g serve
 ```
+
 To build the application (non-production):
+
 ```
-npm run build-swc
+npm run build-dev
 ```
+
 To host it locally:
+
 ```
 npm run local-deploy
 ```
+
 Wait for the compilation to complete and go to [http://localhost:4200](http://localhost:4200) by default.
+
+### Build with production environment
+
+To build the application with production values, run:
+
+```
+npm run build-prod
+```
