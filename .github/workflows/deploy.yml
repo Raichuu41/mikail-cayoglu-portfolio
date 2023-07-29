@@ -1,0 +1,26 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: [self-hosted, "new-star"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker Image
+        run: sudo docker build -t image_deploy .
+
+      - name: Stop and Remove Existing Container
+        run: |
+          sudo docker stop mikail-cayoglu-portfolio || true
+          sudo docker rm mikail-cayoglu-portfolio || true
+
+      - name: Run Docker Container
+        run: sudo docker run -d -p 9777:80/tcp --name mikail-cayoglu-portfolio image_deploy
+
