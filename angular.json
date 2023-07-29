@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mikailcayoglu-portfolio": {
+    "mikail-cayoglu-portfolio": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -103,18 +103,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mikailcayoglu-portfolio:build"
+            "browserTarget": "mikail-cayoglu-portfolio:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mikailcayoglu-portfolio:build:production"
+              "browserTarget": "mikail-cayoglu-portfolio:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mikailcayoglu-portfolio:build"
+            "browserTarget": "mikail-cayoglu-portfolio:build"
           }
         },
         "test": {
@@ -150,7 +150,7 @@
       }
     }
   },
-  "defaultProject": "mikailcayoglu-portfolio",
+  "defaultProject": "mikail-cayoglu-portfolio",
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss"

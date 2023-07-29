@@ -8,7 +8,7 @@ import {LanguageService} from 'src/app/services/language/language.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'mikailcayoglu-portfolio';
+  title = 'mikail-cayoglu-portfolio';
 
   constructor(
     private metaService: Meta,
