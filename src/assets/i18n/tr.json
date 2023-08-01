@@ -68,7 +68,7 @@
     {
       "Title": "Synk",
       "Description": "Kullanıcılara <span class='underline'>muhasebe ve kontrol araçları</span> sunarak projelerini yönetmelerine izin veren bir <span class='underline'>web arayüzü</span>. Proje yönetimini <span class='underline'>kolaylaştırmak</span>, manuel veri girişini azaltmak ve karar verme için doğru finansal bilgi sağlamak amacıyla tasarlanmıştır.",
-      "image": "assets/images/layout-explorer-page.webp",
+      "image": "assets/images/synk.webp",
       "Technologies": [
         "Angular",
         "Node.js",

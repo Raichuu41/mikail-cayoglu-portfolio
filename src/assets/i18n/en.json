@@ -68,7 +68,7 @@
     {
       "Title": "Synk",
       "Description": "A <span class='underline'>web interface</span> that enables users to manage their projects by providing tools for <span class='underline'>accounting and controlling</span>. It is designed to <span class='underline'>simplify project management</span>, reduce manual data entry and provide accurate financial information for decision-making.",
-      "image": "assets/images/layout-explorer-page.webp",
+      "image": "assets/images/synk.webp",
       "Technologies": [
         "Angular",
         "Node.js",
