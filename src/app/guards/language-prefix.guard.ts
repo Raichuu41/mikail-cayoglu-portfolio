@@ -1,24 +1,23 @@
-import {Injectable} from '@angular/core';
-import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
+import {inject} from '@angular/core';
+import {ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree, CanActivateFn} from '@angular/router';
 import {Observable} from 'rxjs';
 import {LanguageService} from "../services/language/language.service";
 
-@Injectable({
-  providedIn: 'root'
-})
-export class LanguageGuard  {
-  constructor(private languageService: LanguageService, private router: Router) {
-  }
+export const languageGuard: CanActivateFn = (
+  route: ActivatedRouteSnapshot,
+  state: RouterStateSnapshot
+): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree => {
+  const languageService = inject(LanguageService);  // Use `inject` function to get the service instance
+  const router = inject(Router);  // Use `inject` function to get the Router instance
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    const langSegments = state.url.split('/');
-    const lang = langSegments[1];
-    if (this.languageService.isLanguage(lang)) {
-      this.languageService.changeLanguage(lang);
-    } else {
-      this.router.navigateByUrl(`/${this.languageService.language}/home`).then(r => {
-      });
-    }
-    return true;
+  const langSegments = state.url.split('/');
+  const lang = langSegments[1];
+
+  if (languageService.isLanguage(lang)) {
+    languageService.changeLanguage(lang);
+    return true;  // Allow navigation if the language is valid
+  } else {
+    // Redirect to the default language route if the language is invalid
+    return router.createUrlTree([`/${languageService.language}/home`]);
   }
-}
+};

@@ -7,7 +7,7 @@ import {GeneralModule} from './components/general/general.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClient, provideHttpClient} from '@angular/common/http';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HttpLoaderFactory} from "./factory/translate-loader.factory";
 import {SharedModule} from "./shared/shared.module";
@@ -24,7 +24,6 @@ import {SharedModule} from "./shared/shared.module";
 
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     TranslateModule.forRoot({
       loader: {
@@ -35,7 +34,7 @@ import {SharedModule} from "./shared/shared.module";
     }),
     SharedModule
   ],
-  providers: [TranslateService],
+  providers: [TranslateService, provideHttpClient()],
   exports: [],
   bootstrap: [AppComponent]
 })

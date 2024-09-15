@@ -1,19 +1,24 @@
 import {NgModule} from '@angular/core';
 import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './components/home/home.component';
-import {LanguageGuard} from "./guards/language-prefix.guard";
+import {languageGuard} from "./guards/language-prefix.guard";
 
 
 const routes: Routes = [
   {
+    path: ':lang',
+    pathMatch: 'full',
+    redirectTo: ':lang/home',
+  },
+  {
     path: ':lang/home',
     component: HomeComponent,
-    canActivate: [LanguageGuard],
+    canActivate: [languageGuard],
   },
   {
     path: '**',
     pathMatch: 'prefix',
-    canActivate: [LanguageGuard],
+    canActivate: [languageGuard],
     redirectTo: '',
   },
 ];
@@ -25,7 +30,6 @@ const routerOptions: ExtraOptions = {
 @NgModule({
   imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule],
-  providers: [LanguageGuard]
 })
 export class AppRoutingModule {
 }
