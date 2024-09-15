@@ -3,7 +3,7 @@
     <div class="section-box">
       <div class="fade-up" appFadeUp>
         <h3 class="section-title">
-          <span class="n-section-title">03.</span> {{"FeatureProjects.Title" | translate}}
+          <span class="n-section-title">03.</span> {{ "FeatureProjects.Title" | translate }}
         </h3>
       </div>
       <!-- Start Projects -->
@@ -17,9 +17,9 @@
         <div class="project-info">
           <div class="project-box">
             <!-- Project Label -->
-            <h4 class="feature-project">{{"FeatureProjects.Label" | translate}}</h4>
+            <h4 class="feature-project">{{ "FeatureProjects.Label" | translate }}</h4>
             <!-- Project Title -->
-            <h5 class="project-name">{{project.Title}}</h5>
+            <h5 class="project-name">{{ project.Title }}</h5>
             <!-- Project Description -->
             <div class="project-description-box">
               <p [innerHTML]="project.Description" class="mb-0">
@@ -28,18 +28,21 @@
             <!-- Technology stack -->
             <ul class="project-skills">
               <li *ngFor='let technology of project.Technologies' class="ms-3">
-                <span class="underline technology">{{technology}}</span>
+                <span class="underline technology">{{ technology }}</span>
               </li>
             </ul>
             <!-- Project Links -->
             <div class="project-links">
               <a *ngIf="project['githubLink']" [href]="project['githubLink']" style='color: inherit' target="_blank"
-                 aria-label="GitHub">
+                 aria-label="GitHub"
+                 (click)="analyticsService.sendAnalyticEvent('click_project_github', 'projects', 'click')">
                 <fa-icon [icon]="['fab', 'github']" class="ms-3" [id]="'githubLink-' + project.Title"></fa-icon>
               </a>
               <a *ngIf="project['demoLink']" [href]="project['demoLink']" style='color: inherit' target="_blank"
-                 aria-label="Demo">
-                <fa-icon [icon]="['fas', 'external-link-alt']" class="ms-3" [id]="'demoLink-' + project.Title"></fa-icon>
+                 aria-label="Demo"
+                 (click)="analyticsService.sendAnalyticEvent('click_project_demo', 'projects', 'click')">
+                <fa-icon [icon]="['fas', 'external-link-alt']" class="ms-3"
+                         [id]="'demoLink-' + project.Title"></fa-icon>
               </a>
             </div>
           </div>

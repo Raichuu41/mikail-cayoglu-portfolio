@@ -2,7 +2,7 @@
   <div class="container">
     <div class="section-box">
       <div class="">
-        <h3 class="section-title fade-up" appFadeUp>{{"OtherProjects.Title" | translate}}
+        <h3 class="section-title fade-up" appFadeUp>{{ "OtherProjects.Title" | translate }}
         </h3>
       </div>
       <div class="mt-5">
@@ -16,26 +16,27 @@
                 </div>
                 <div class="col-6 d-flex p-0 justify-content-end">
                   <a
-                    (click)='analyticsService.sendAnalyticEvent("click_project_demo", "projects", "click")'
+                    (click)='analyticsService.sendAnalyticEvent("click_project_demo", "more_projects", "click")'
                     *ngIf="project['demoLink']"
                     [href]="project['demoLink']" style='color: inherit' target="_blank" aria-label="Demo">
-                    <fa-icon [icon]="['fas', 'external-link-alt']" class="ms-3" [id]="'demoLink-' + project.Title"></fa-icon>
+                    <fa-icon [icon]="['fas', 'external-link-alt']" class="ms-3"
+                             [id]="'demoLink-' + project.Title"></fa-icon>
                   </a>
-                  <a (click)='analyticsService.sendAnalyticEvent("click_project_github", "projects", "click")'
+                  <a (click)='analyticsService.sendAnalyticEvent("click_project_github", "more_projects", "click")'
                      *ngIf="project['githubLink']"
                      [href]="project['githubLink']" style='color: inherit' target="_blank" aria-label="GitHub">
                     <fa-icon [icon]="['fab', 'github']" class="ms-3" [id]="'github-' + project.Title"></fa-icon>
                   </a>
                 </div>
-                <h4 class="other-project-title mt-4">{{project.Title}}</h4>
+                <h4 class="other-project-title mt-4">{{ project.Title }}</h4>
                 <p class="other-project-description">
-                  {{project.Description}}
+                  {{ project.Description }}
                 </p>
               </div>
               <div>
                 <ul class="more-projects-skills">
                   <li *ngFor='let technology of project.Technologies'>
-                    <span class="underline">{{technology}}</span>
+                    <span class="underline">{{ technology }}</span>
                   </li>
                 </ul>
               </div>

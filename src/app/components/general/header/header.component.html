@@ -16,26 +16,26 @@
       <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")'>
         <a (click)="addFragment('about', $event)" class="nav-link" href="#about"><span class='nav-number'>01. </span>
           <span
-            class="underline nav-text"> {{"Header.Item1" | translate}}</span></a>
+            class="underline nav-text"> {{ "Header.Item1" | translate }}</span></a>
       </li>
       <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_experience", "menu", "click")'>
         <a (click)='addFragment("jobs", $event)' class="nav-link" href="#jobs"><span class='nav-number'>02. </span>
           <span
-            class="underline nav-text"> {{"Header.Item2" | translate}}</span></a>
+            class="underline nav-text"> {{ "Header.Item2" | translate }}</span></a>
       </li>
-      <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_jobs", "menu", "click")'>
+      <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_projects", "menu", "click")'>
         <a (click)='addFragment("projects", $event)' class="nav-link" href="#projects"><span
           class='nav-number'>03. </span> <span
-          class="underline nav-text"> {{"Header.Item3" | translate}}</span></a>
+          class="underline nav-text"> {{ "Header.Item3" | translate }}</span></a>
       </li>
       <li class="nav-item" (click)='analyticsService.sendAnalyticEvent("click_contact", "menu", "click")'>
         <a (click)='addFragment("contact", $event)' class="nav-link" href="#contact"><span
           class='nav-number'>04. </span> <span
-          class="underline nav-text"> {{"Header.Item4" | translate}}</span></a>
+          class="underline nav-text"> {{ "Header.Item4" | translate }}</span></a>
       </li>
       <li class="nav-item">
         <a [href]="cvLink" target="_blank" class="nav-link main-btn cv-button">
-          {{"Header.cvBtn" | translate}}
+          {{ "Header.cvBtn" | translate }}
         </a>
       </li>
       <li class="nav-item dropdown">
@@ -46,7 +46,7 @@
                  [ngSrc]="language.flag"
                  [width]="language.desktopWidth" [height]="language.desktopHeight">
             <span *ngIf='languageFormControl.value == language.languageValue'
-                  class="flag-text">{{language.text}}</span>
+                  class="flag-text">{{ language.text }}</span>
           </ng-container>
           <svg class='arrow-language' height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"/>
@@ -54,11 +54,12 @@
         </a>
         <ul class="dropdown-menu" aria-labelledby="dropdownForm1">
           <li *ngFor="let language of languageOptions">
-            <div class="dropdown-item" (click)="changeLanguage(language.languageValue)"
+            <div class="dropdown-item"
+                 (click)="changeLanguage(language.languageValue)"
                  [class.active]="languageFormControl.value == language.languageValue">
               <img [alt]="language.text" [ngSrc]="language.flag" [width]="language.desktopWidth"
                    [height]="language.desktopHeight" priority>
-              <span class="flag-text">{{language.text}}</span>
+              <span class="flag-text">{{ language.text }}</span>
               <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                    width="16" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -82,27 +83,27 @@
           <!-- Repeated list items with different click events and translations -->
           <li (click)='analyticsService.sendAnalyticEvent("click_about", "menu", "click")' class="mb-2">
             <a (click)='addFragment("about", $event)' href="#about" class="d-flex">
-              <span>01. </span> {{"Header.Item1" | translate}}
+              <span>01. </span> {{ "Header.Item1" | translate }}
             </a>
           </li>
           <li (click)='analyticsService.sendAnalyticEvent("click_experience", "menu", "click")'>
             <a (click)='addFragment("jobs", $event)' href="#jobs" class="d-flex">
-              <span>02. </span> {{"Header.Item2" | translate}}
+              <span>02. </span> {{ "Header.Item2" | translate }}
             </a>
           </li>
-          <li (click)='analyticsService.sendAnalyticEvent("click_jobs", "menu", "click")'>
+          <li (click)='analyticsService.sendAnalyticEvent("click_projects", "menu", "click")'>
             <a (click)='addFragment("projects", $event)' href="#projects" class="d-flex">
-              <span>03. </span> {{"Header.Item3" | translate}}
+              <span>03. </span> {{ "Header.Item3" | translate }}
             </a>
           </li>
           <li (click)='analyticsService.sendAnalyticEvent("click_contact", "menu", "click")'>
             <a (click)='addFragment("contact", $event)' href="#contact" class="d-flex">
-              <span>04. </span> {{"Header.Item4" | translate}}
+              <span>04. </span> {{ "Header.Item4" | translate }}
             </a>
           </li>
           <li>
             <a [href]="cvLink" target="_blank" class="main-btn cv-button d-flex justify-content-center">
-              {{"Header.cvBtn" | translate}}
+              {{ "Header.cvBtn" | translate }}
             </a>
           </li>
           <li>
@@ -113,7 +114,7 @@
                    class="d-flex align-items-center language-container-selector active px-3 py-1">
                 <img [alt]="language.text" [ngSrc]="language.flag" [width]="language.mobileWidth"
                      [height]="language.mobileHeight">
-                <span class="flag-text">{{language.text}}</span>
+                <span class="flag-text">{{ language.text }}</span>
                 <svg class="bi bi-check2 arrow-active" fill="currentColor" height="16" viewBox="0 0 16 16"
                      width="16" xmlns="http://www.w3.org/2000/svg">
                   <path

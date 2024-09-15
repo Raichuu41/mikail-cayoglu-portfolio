@@ -130,5 +130,6 @@ export class HeaderComponent implements OnInit {
 
   changeLanguage(language: string) {
     this.languageFormControl.setValue(language);
+    this.analyticsService.sendAnalyticEvent(`change_language_${language}`, 'language', language);
   }
 }
