@@ -29,12 +29,16 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta content="#1976d2" name="theme-color">
   <link rel="manifest" href="manifest.webmanifest">
-
-  <!-- Better Google Analytics performance -->
-  <link rel="preconnect" href="https://www.googletagmanager.com">
-  <link rel="preconnect" href="https://www.google-analytics.com">
-  <script defer src="https://www.googletagmanager.com/gtag/js?id=G-Z2XPHEPY38"></script>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com; object-src 'none';">
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2XPHEPY38"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z2XPHEPY38');
+</script>
 <body>
 <app-root></app-root>
 <noscript>Please enable JavaScript to continue using this application.</noscript>

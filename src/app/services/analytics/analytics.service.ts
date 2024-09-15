@@ -1,22 +1,26 @@
+declare const gtag: Function;
 import {Injectable} from '@angular/core';
-import {GoogleAnalyticsService} from 'ngx-google-analytics';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AnalyticsService {
 
-  constructor(
-    private $gaService: GoogleAnalyticsService
-  ) {
+  constructor() {
   }
 
   sendAnalyticEvent(action: string, category: string, label: string): void {
-    this.$gaService.event(action, category, label);
+    gtag('event', action, {
+      event_category: category,
+      event_label: label
+    });
   }
 
   sendAnalyticPageView(path: string, title: string): void {
-    this.$gaService.pageView(path, title);
+    gtag('event', 'page_view', {
+      page_path: path,
+      page_title: title
+    });
   }
 
 }
