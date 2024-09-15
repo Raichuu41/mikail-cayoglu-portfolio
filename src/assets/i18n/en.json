@@ -18,6 +18,17 @@
   "Experience.Title": "Experience",
   "Experience.Jobs": [
     {
+      "Tab": "Carl Zeiss AG",
+      "Title": "Software Developer & Application Specialist ServiceNow",
+      "Date": "May 2024 - Present",
+      "Description": [
+        "Software development in the ServiceNow environment for custom apps using JavaScript, HTML, and CSS",
+        "Requirement analysis through contact with stakeholders",
+        "Implementation and maintenance of server-side test automation",
+        "Ensuring code quality through code reviews"
+      ]
+    },
+    {
       "Tab": "Chiron Services",
       "Title": "Data & Cloud Engineer",
       "Date": "September 2020 - Present",
