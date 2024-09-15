@@ -6,7 +6,7 @@ The current live version can be found [here](https://mikail-cayoglu.de).
 This portfolio is developed for personal use.
 The design is inspired by Brittany Chiang, her repository can be found [here](https://github.com/bchiang7/v4).
 
-The project is built using Angular 15.
+The project is built using Angular 18.
 
 ### Prerequisites
 
