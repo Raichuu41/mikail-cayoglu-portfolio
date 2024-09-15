@@ -150,7 +150,6 @@
       }
     }
   },
-  "defaultProject": "mikail-cayoglu-portfolio",
   "schematics": {
     "@schematics/angular:component": {
       "style": "scss"

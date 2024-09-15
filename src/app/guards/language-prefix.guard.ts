@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
-import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import {Observable} from 'rxjs';
 import {LanguageService} from "../services/language/language.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class LanguageGuard implements CanActivate {
+export class LanguageGuard  {
   constructor(private languageService: LanguageService, private router: Router) {
   }
 
