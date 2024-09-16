@@ -183,5 +183,12 @@
   "Contact.PreTitle": "What's next?",
   "Contact.Title": "Get in touch!",
   "Contact.Content": "Feel free to contact me, my inbox is always open. I will answer your email as soon as possible.",
-  "Contact.Btn": "Say Hello"
+  "Contact.Btn": "Say Hello",
+  "cookie": {
+    "message": "This website uses cookies to ensure you get the best experience on our website.",
+    "dismiss": "Got it!",
+    "deny": "Refuse cookies",
+    "link": "Learn more",
+    "policy": "Cookie Policy"
+  }
 }

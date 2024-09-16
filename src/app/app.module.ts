@@ -11,6 +11,31 @@ import {HttpClient, provideHttpClient} from '@angular/common/http';
 import {TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HttpLoaderFactory} from "./factory/translate-loader.factory";
 import {SharedModule} from "./shared/shared.module";
+import {NgcCookieConsentConfig, NgcCookieConsentModule} from "ngx-cookieconsent";
+
+const cookieConfig: NgcCookieConsentConfig = {
+  cookie: {
+    domain: environment.production ? 'mikail-cayoglu.de' : 'localhost'
+  },
+  palette: {
+    popup: {
+      background: '#000'
+    },
+    button: {
+      background: '#f1d600'
+    }
+  },
+  theme: 'edgeless',
+  type: 'opt-in',
+  content: {
+    message: '{{ "cookie.message" | translate }}',
+    dismiss: '{{ "cookie.dismiss" | translate }}',
+    deny: '{{ "cookie.deny" | translate }}',
+    link: '{{ "cookie.link" | translate }}',
+    // href: 'https://cookiesandyou.com', // Update the link for more information about cookies
+    policy: '{{ "cookie.policy" | translate }}'
+  }
+}
 
 @NgModule({
   declarations: [
@@ -18,7 +43,7 @@ import {SharedModule} from "./shared/shared.module";
   ],
   imports: [
     BrowserAnimationsModule,
-
+    NgcCookieConsentModule.forRoot(cookieConfig),
     HomeModule,
     GeneralModule,
 
@@ -32,7 +57,8 @@ import {SharedModule} from "./shared/shared.module";
         deps: [HttpClient]
       }
     }),
-    SharedModule
+    SharedModule,
+
   ],
   providers: [TranslateService, provideHttpClient()],
   exports: [],

@@ -183,5 +183,12 @@
   "Contact.PreTitle": "Ne yapabiliriz?",
   "Contact.Title": "İletişime geçin!",
   "Contact.Content": "Benimle iletişime geçmekten çekinmeyin, gelen kutum her zaman açıktır. E-postanıza en kısa sürede cevap vereceğim.",
-  "Contact.Btn": "Merhaba deyin"
+  "Contact.Btn": "Merhaba deyin",
+  "cookie": {
+    "message": "This website uses cookies to ensure you get the best experience on our website.",
+    "dismiss": "Got it!",
+    "deny": "Refuse cookies",
+    "link": "Learn more",
+    "policy": "Cookie Policy"
+  }
 }

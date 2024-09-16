@@ -36,7 +36,7 @@ import {SharedModule} from "../../shared/shared.module";
     }),
     NgOptimizedImage,
     FontAwesomeModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class HomeModule {

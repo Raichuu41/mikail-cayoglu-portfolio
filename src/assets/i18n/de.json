@@ -183,5 +183,12 @@
   "Contact.PreTitle": "Wie geht es weiter?",
   "Contact.Title": "Kontaktiere mich!",
   "Contact.Content": "Fühlen Sie sich frei, mich zu kontaktieren, mein Posteingang ist immer offen. Ich werde Ihre E-Mail so schnell wie möglich beantworten.",
-  "Contact.Btn": "Hallo sagen"
+  "Contact.Btn": "Hallo sagen",
+  "cookie": {
+    "message": "This website uses cookies to ensure you get the best experience on our website.",
+    "dismiss": "Got it!",
+    "deny": "Refuse cookies",
+    "link": "Learn more",
+    "policy": "Cookie Policy"
+  }
 }

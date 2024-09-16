@@ -28,11 +28,13 @@
             "styles": [
               "src/custom-bootstrap.scss",
               "src/styles.scss",
-              "src/fonts.scss"
+              "src/fonts.scss",
+              "node_modules/cookieconsent/build/cookieconsent.min.css"
             ],
             "scripts": [
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/cookieconsent/build/cookieconsent.min.js"
             ],
             "deleteOutputPath": true,
             "aot": true,
